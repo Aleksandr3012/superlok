@@ -123,7 +123,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main320.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -226,7 +226,61 @@ function eventHandler() {
 				// yaCounter55828534.reachGoal('zakaz');
 			}, 4000);
 		}).fail(function () {});
+	}); //luckyoneJS
+
+	var partnersSlider = new Swiper('.partners-slider-container-js', {
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10
+			},
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			},
+			992: {
+				slidesPerView: 'auto',
+				spaceBetween: 30
+			}
+		},
+		loop: true,
+		//autoplay
+		//autoplay: {
+		//	delay: 4000,
+		//},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5
+		},
+		on: {
+			slideChange: function slideChange() {
+				if (!partnersSlider) return;
+				var currSlideTxt = document.querySelector('.current-slide-js');
+				if (!currSlideTxt) return;
+				currSlideTxt.innerHTML = addZero(partnersSlider.realIndex + 1);
+			}
+		}
+	}); //prev, next
+
+	$('.next-parnter-sl-js').click(function () {
+		partnersSlider.slideNext();
 	});
+	$('.prev-parnter-sl-js').click(function () {
+		partnersSlider.slidePrev();
+	}); //
+
+	function addZero(num) {
+		num = Number(num);
+
+		if (num >= 0 && num <= 9) {
+			num = "0" + num;
+		}
+
+		return num;
+	} //
+
+
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {

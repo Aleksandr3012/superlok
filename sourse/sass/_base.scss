@@ -12,9 +12,10 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0;
+	background-position: center -5912px;
+	// -4809px
 	opacity: 0;
-	// opacity: 0.7;
+	//opacity: 0.7;
 }
 
 body,
@@ -32,6 +33,12 @@ html {
 
 .section-title { 
 	padding-bottom: var(--sTPB);
+
+	h2{
+		@include media-breakpoint-down(sm){
+			font-size: 25px;
+		}
+	}
 }
 
 body {
@@ -438,4 +445,30 @@ iframe {
 			opacity: 0;
 		}
 	}
+}
+
+.btn-primary-frame{
+
+	border-radius: 3px;
+
+	border: none !important;
+	outline: none !important;
+	color: $white;
+
+	@include mt();
+
+	box-shadow: 0px 17px 31px rgba(24, 66, 118, 0.24);
+	background: linear-gradient(270deg, #1975B1 0%, #155286 100%);
+	&:hover{
+		box-shadow: 0px 17px 31px rgba(24, 66, 118, 0.24);
+		background: linear-gradient(270deg, #0671B6 0%, #0671B6 100%);
+	}
+
+	font-weight: 500;
+	display: inline-flex;
+	vertical-align: top;
+
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }

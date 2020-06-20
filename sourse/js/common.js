@@ -128,7 +128,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main320.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -265,6 +265,63 @@ function eventHandler() {
 
 	});
 
+	//luckyoneJS
+	let partnersSlider =  new Swiper('.partners-slider-container-js', {
+		breakpoints: {
+			320 : {
+				slidesPerView: 1,
+				spaceBetween: 10
+			},
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			},
+			992 : {
+				slidesPerView: 'auto',
+				spaceBetween: 30,
+			},
+		},
+
+		loop: true,
+
+		//autoplay
+		//autoplay: {
+		//	delay: 4000,
+		//},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5
+		},
+
+		on: {
+			slideChange: function () {
+				if (!partnersSlider) return
+				let currSlideTxt = document.querySelector('.current-slide-js');
+				if (!currSlideTxt) return;
+
+				currSlideTxt.innerHTML = addZero(partnersSlider.realIndex + 1);
+			},
+		}
+	});
+
+	//prev, next
+	$('.next-parnter-sl-js').click(function () {
+		partnersSlider.slideNext();
+	});
+	$('.prev-parnter-sl-js').click(function () {
+		partnersSlider.slidePrev();
+	});
+
+	//
+	function addZero(num) {
+		num = Number(num);
+		if (num >= 0 && num <=9) {
+			num = "0" + num;
+		}
+		return num
+	}
+	//
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {

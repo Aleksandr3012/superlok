@@ -1,0 +1,55 @@
+mixin sPartnersAndFeedBack()
+	// start sPartnersAndFeedBack
+	+b.SECTION.sPartnersAndFeedBack#sPartnersAndFeedBack&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Партнеры и отзывы
+				//-+e.slider-block
+					.container
+		+e.slider-controll-bl
+			.container
+				+e.after-headline-txt
+					p Мы сотрудничаем с ведущими компаниями и они нас рекомендуют. Среди них:
+				+e.companyes-logoes-box
+					+logoItem(1)
+					+logoItem(2)
+					+logoItem(3)
+					+logoItem(4)
+					+logoItem(5)
+				+b.partners-slider-container
+					+e.background-brick
+					.swiper-container.partners-slider-container-js
+						.swiper-wrapper
+							+partnersSlide(1)
+							+partnersSlide(2)
+							+partnersSlide(3)
+							+partnersSlide(4)
+							+partnersSlide(5)
+				+e.btn-and-controll-bl
+					+e.A.leave-feedblack-btn(href="#") Оставить отзыв
+					+e.controll-panell
+						+e.arrow-cont
+							+e.pr-nt-parnter-sl.prev-parnter-sl-js
+								+e.arrow-txt Назад
+								+e.arrow-icon-cont
+									+icon('parners-slider-left')
+							+e.pr-nt-parnter-sl.next-parnter-sl-js
+								+e.arrow-txt вперед
+								+e.arrow-icon-cont
+									+icon('parners-slider-right')
+						+e.slide-count-nums
+							+e.current-slide.current-slide-js 01
+							+e.dash-symb /
+							+e.max-slides 05
+
+	// end sPartnersAndFeedBack
+
+mixin logoItem(imgNum=1)
+	+e.logo-item
+		img(src=`img/@2x/partners-sl-logo-${imgNum}.png` alt="")
+		//-.lazy(src="#" data-
+
+mixin partnersSlide(slideNum=1)
+	.swiper-slide
+		.img-cont
+			img.swiper-lazy(src="#" data-src=`img/@2x/partners-slide-${slideNum}.jpg` alt="")
