@@ -16,7 +16,7 @@ html {
 	background-position: center -3550px;
 	//-2218px
 	opacity: 0;
-	//opacity: 0.7;
+	opacity: 0.7;
 }
 
 body,
@@ -415,6 +415,7 @@ iframe {
 	color: #fff !important;
 	box-shadow: none !important;
 	position: relative;
+	z-index: 1;
 	overflow: hidden;
 	@include mt;
 	font-size: rem(18);

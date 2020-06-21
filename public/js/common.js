@@ -182,9 +182,10 @@ function eventHandler() {
 	var swiper4 = new Swiper('.headerSlider', (_Swiper = {
 		// slidesPerView: 5,
 		// ...defaultSl,
+		loop: true,
 		slidesPerView: 1,
 		watchOverflow: true,
-		spaceBetween: 20
+		spaceBetween: 50
 	}, _defineProperty(_Swiper, "watchOverflow", true), _defineProperty(_Swiper, "slidesPerGroup", 1), _defineProperty(_Swiper, "touchRatio", 0.2), _defineProperty(_Swiper, "navigation", {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
