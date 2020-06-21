@@ -8,13 +8,11 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
-	+b.menu-mobile--js.d-lg-none
+
+	+b.menu-mobile--js.d-xl-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
 			+e.calculate.btn.link-modal(href="#") Получить расчет
 			.text-right
@@ -23,17 +21,24 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container-fluid
-			+e.row.row.justify-content-between.align-items-center
-				.col-auto
+			.row.justify-content-between.align-items-center
+				.col.col-xl-auto
 					+e.logo(href="/")
 						img(src="img/@2x/logo.png", alt="SUPERLOK")
-				.col.d-none.d-lg-block
+				.col.d-none.d-xl-block
 					+mnu()
-				.col.d-lg-none
-					+mob-mnu
-				.col-auto
-					+e.tel.h6(href="tel:8(831)423-86-95") 8 (831) 423-86-95
-				.col-auto
+					
+				.col-auto.d-none.d-sm-block
+					
+					+e.tel.h6(href="tel:8(831)423-86-95") 
+						span 8 (831) 423-86-95
+						+icon('phone')
+				.col-auto.d-none.d-md-block
 					+e.calculate.btn.link-modal(href="#") Получить расчет
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js.d-xl-none
+						span
+			.d-xl-none
+				+mob-mnu()
 					
 	// end top-nav

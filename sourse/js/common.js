@@ -128,7 +128,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/desktop.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -197,9 +197,10 @@ function eventHandler() {
 	const swiper4 = new Swiper('.headerSlider', {
 		// slidesPerView: 5,
 		// ...defaultSl,
+		loop: true,
 		slidesPerView: 1,
 		watchOverflow: true,
-		spaceBetween: 20,
+		spaceBetween: 50,
 		// freeMode: true,
 		watchOverflow: true,
 		slidesPerGroup: 1,

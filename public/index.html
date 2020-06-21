@@ -30,10 +30,10 @@
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
 					<div class="container-fluid">
-						<div class="top-nav__row row justify-content-between align-items-center">
-							<div class="col-auto"><a class="top-nav__logo" href="/"><img src="img/@2x/logo.png" alt="SUPERLOK"/></a>
+						<div class="row justify-content-between align-items-center">
+							<div class="col col-xl-auto"><a class="top-nav__logo" href="/"><img src="img/@2x/logo.png" alt="SUPERLOK"/></a>
 							</div>
-							<div class="col d-none d-lg-block">
+							<div class="col d-none d-xl-block">
 								<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="/" itemprop="url">Главная</a>
 									</li>
@@ -55,42 +55,47 @@
 									</li>
 								</ul>
 							</div>
-							<div class="col d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+							<div class="col-auto d-none d-sm-block"><a class="top-nav__tel h6" href="tel:8(831)423-86-95"> <span>8 (831) 423-86-95</span>
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg></a>
+							</div>
+							<div class="col-auto d-none d-md-block"><a class="top-nav__calculate btn link-modal" href="#">Получить расчет</a>
+							</div>
+							<div class="col-auto d-xl-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
 								</div>
-								<div class="menu-mobile menu-mobile--js d-lg-none">
-									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-									</div>
-									<div class="menu-mobile__inner">
-										<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="/" itemprop="url">Главная</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Цена  </a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Вам выгодно</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Каталог продукции</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> О компании  </a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">О SUPERLOCK</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Сравнение</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Партнеры и отзывы</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты </a>
-											</li>
-										</ul><a class="menu-mobile__calculate btn link-modal" href="#">Получить расчет</a>
-										<div class="text-right"></div>
-									</div>
+							</div>
+						</div>
+						<div class="d-xl-none">
+							<div class="menu-mobile menu-mobile--js d-xl-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
-								<!--  мобильное меню-->
+								<div class="menu-mobile__inner">
+									<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="/" itemprop="url">Главная</a>
+										</li>
+										<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Цена  </a>
+										</li>
+										<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Вам выгодно</a>
+										</li>
+										<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Каталог продукции</a>
+										</li>
+										<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> О компании  </a>
+										</li>
+										<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">О SUPERLOCK</a>
+										</li>
+										<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Сравнение</a>
+										</li>
+										<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Партнеры и отзывы</a>
+										</li>
+										<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты </a>
+										</li>
+									</ul><a class="menu-mobile__calculate btn link-modal" href="#">Получить расчет</a>
+									<div class="text-right"></div>
+								</div>
 							</div>
-							<div class="col-auto"><a class="top-nav__tel h6" href="tel:8(831)423-86-95">8 (831) 423-86-95</a>
-							</div>
-							<div class="col-auto"><a class="top-nav__calculate btn link-modal" href="#">Получить расчет</a>
-							</div>
+							<!--  мобильное меню-->
 						</div>
 					</div>
 				</div>
@@ -98,144 +103,182 @@
 				<!-- start headerBlock-->
 				<div class="headerBlock section" id="headerBlock">
 					<div class="container">
-						<div class="swiper-pagination swiper-pagination--head"></div>
 						<div class="headerSlider swiper-container">
 							<div class="swiper-wrapper">
 											<div class="swiper-slide">
 												<div class="row">
-													<div class="col-lg-6">
+													<div class="col-lg-7">
 														<div class="headerBlock__links"><a class="headerBlock__linkItem" href="#">Аналоги Swagelok</a><a class="headerBlock__linkItem" href="#">Аналоги Hy Lok</a><a class="headerBlock__linkItem" href="#">Аналоги Parker</a>
 														</div>
 														<h1>Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.</h1>
 														<div class="h5">В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры</div>
-														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#">Получить расчет</a>
+														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#modal-call">Получить&nbsp;расчет</a>
 															<div class="headerBlock__price">
 																<svg class="icon icon-clock ">
 																	<use xlink:href="img/svg/sprite.svg#clock"></use>
 																</svg>
-																<div class="h6">Вы получите точную стоимость в течении <strong>1 часа!</strong></div>
+																<div class="h6">Вы получите точную стоимость в течении <strong>1&nbsp;часа!</strong></div>
 															</div>
 														</div>
 													</div>
-													<div class="col">
+													<div class="col d-none d-lg-block">
 														<div class="headerBlock__pic"><img class="headerBlock__img res-i" src="img/@2x/headerImg-1.png" alt="" role="presentation"/>
 														</div>
 													</div>
 												</div>
-												<div class="swiper-button-next"><span>вперед</span>
-													<svg class="icon icon-arrow-r ">
-														<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
-													</svg>
-												</div>
-												<div class="swiper-button-prev"><span>назад</span>
-													<svg class="icon icon-arrow-l ">
-														<use xlink:href="img/svg/sprite.svg#arrow-l"></use>
-													</svg>
+												<div class="headerBlock__swiperButton">
+													<div class="swiper-button-prev"><span>назад</span><img src="img/@2x/arrow-l.png" alt=""/></div>
+													<div class="swiper-button-next"><span>вперед</span><img src="img/@2x/arrow-r.png" alt=""/></div>
 												</div>
 											</div>
 											<div class="swiper-slide">
 												<div class="row">
-													<div class="col-lg-6">
+													<div class="col-lg-7">
 														<div class="headerBlock__links"><a class="headerBlock__linkItem" href="#">Аналоги Swagelok</a><a class="headerBlock__linkItem" href="#">Аналоги Hy Lok</a><a class="headerBlock__linkItem" href="#">Аналоги Parker</a>
 														</div>
 														<h1>Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.</h1>
 														<div class="h5">В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры</div>
-														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#">Получить расчет</a>
+														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#modal-call">Получить&nbsp;расчет</a>
 															<div class="headerBlock__price">
 																<svg class="icon icon-clock ">
 																	<use xlink:href="img/svg/sprite.svg#clock"></use>
 																</svg>
-																<div class="h6">Вы получите точную стоимость в течении <strong>1 часа!</strong></div>
+																<div class="h6">Вы получите точную стоимость в течении <strong>1&nbsp;часа!</strong></div>
 															</div>
 														</div>
 													</div>
-													<div class="col">
-														<div class="headerBlock__pic"><img class="headerBlock__img res-i" src="img/@2x/headerImg-1.png" alt="" role="presentation"/>
+													<div class="col d-none d-lg-block">
+														<div class="headerBlock__pic"><img class="headerBlock__img res-i" src="img/@2x/headerImg-2.png" alt="" role="presentation"/>
 														</div>
 													</div>
 												</div>
-												<div class="swiper-button-next"><span>вперед</span>
-													<svg class="icon icon-arrow-r ">
-														<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
-													</svg>
-												</div>
-												<div class="swiper-button-prev"><span>назад</span>
-													<svg class="icon icon-arrow-l ">
-														<use xlink:href="img/svg/sprite.svg#arrow-l"></use>
-													</svg>
+												<div class="headerBlock__swiperButton">
+													<div class="swiper-button-prev"><span>назад</span><img src="img/@2x/arrow-l.png" alt=""/></div>
+													<div class="swiper-button-next"><span>вперед</span><img src="img/@2x/arrow-r.png" alt=""/></div>
 												</div>
 											</div>
 											<div class="swiper-slide">
 												<div class="row">
-													<div class="col-lg-6">
+													<div class="col-lg-7">
 														<div class="headerBlock__links"><a class="headerBlock__linkItem" href="#">Аналоги Swagelok</a><a class="headerBlock__linkItem" href="#">Аналоги Hy Lok</a><a class="headerBlock__linkItem" href="#">Аналоги Parker</a>
 														</div>
 														<h1>Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.</h1>
 														<div class="h5">В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры</div>
-														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#">Получить расчет</a>
+														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#modal-call">Получить&nbsp;расчет</a>
 															<div class="headerBlock__price">
 																<svg class="icon icon-clock ">
 																	<use xlink:href="img/svg/sprite.svg#clock"></use>
 																</svg>
-																<div class="h6">Вы получите точную стоимость в течении <strong>1 часа!</strong></div>
+																<div class="h6">Вы получите точную стоимость в течении <strong>1&nbsp;часа!</strong></div>
 															</div>
 														</div>
 													</div>
-													<div class="col">
-														<div class="headerBlock__pic"><img class="headerBlock__img res-i" src="img/@2x/headerImg-1.png" alt="" role="presentation"/>
+													<div class="col d-none d-lg-block">
+														<div class="headerBlock__pic"><img class="headerBlock__img res-i" src="img/@2x/headerImg-3.png" alt="" role="presentation"/>
 														</div>
 													</div>
 												</div>
-												<div class="swiper-button-next"><span>вперед</span>
-													<svg class="icon icon-arrow-r ">
-														<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
-													</svg>
-												</div>
-												<div class="swiper-button-prev"><span>назад</span>
-													<svg class="icon icon-arrow-l ">
-														<use xlink:href="img/svg/sprite.svg#arrow-l"></use>
-													</svg>
+												<div class="headerBlock__swiperButton">
+													<div class="swiper-button-prev"><span>назад</span><img src="img/@2x/arrow-l.png" alt=""/></div>
+													<div class="swiper-button-next"><span>вперед</span><img src="img/@2x/arrow-r.png" alt=""/></div>
 												</div>
 											</div>
 											<div class="swiper-slide">
 												<div class="row">
-													<div class="col-lg-6">
+													<div class="col-lg-7">
 														<div class="headerBlock__links"><a class="headerBlock__linkItem" href="#">Аналоги Swagelok</a><a class="headerBlock__linkItem" href="#">Аналоги Hy Lok</a><a class="headerBlock__linkItem" href="#">Аналоги Parker</a>
 														</div>
 														<h1>Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.</h1>
 														<div class="h5">В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры</div>
-														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#">Получить расчет</a>
+														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#modal-call">Получить&nbsp;расчет</a>
 															<div class="headerBlock__price">
 																<svg class="icon icon-clock ">
 																	<use xlink:href="img/svg/sprite.svg#clock"></use>
 																</svg>
-																<div class="h6">Вы получите точную стоимость в течении <strong>1 часа!</strong></div>
+																<div class="h6">Вы получите точную стоимость в течении <strong>1&nbsp;часа!</strong></div>
 															</div>
 														</div>
 													</div>
-													<div class="col">
-														<div class="headerBlock__pic"><img class="headerBlock__img res-i" src="img/@2x/headerImg-1.png" alt="" role="presentation"/>
+													<div class="col d-none d-lg-block">
+														<div class="headerBlock__pic"><img class="headerBlock__img res-i" src="img/@2x/headerImg-4.png" alt="" role="presentation"/>
 														</div>
 													</div>
 												</div>
-												<div class="swiper-button-next"><span>вперед</span>
-													<svg class="icon icon-arrow-r ">
-														<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
-													</svg>
+												<div class="headerBlock__swiperButton">
+													<div class="swiper-button-prev"><span>назад</span><img src="img/@2x/arrow-l.png" alt=""/></div>
+													<div class="swiper-button-next"><span>вперед</span><img src="img/@2x/arrow-r.png" alt=""/></div>
 												</div>
-												<div class="swiper-button-prev"><span>назад</span>
-													<svg class="icon icon-arrow-l ">
-														<use xlink:href="img/svg/sprite.svg#arrow-l"></use>
-													</svg>
+											</div>
+											<div class="swiper-slide">
+												<div class="row">
+													<div class="col-lg-7">
+														<div class="headerBlock__links"><a class="headerBlock__linkItem" href="#">Аналоги Swagelok</a><a class="headerBlock__linkItem" href="#">Аналоги Hy Lok</a><a class="headerBlock__linkItem" href="#">Аналоги Parker</a>
+														</div>
+														<h1>Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.</h1>
+														<div class="h5">В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры</div>
+														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#modal-call">Получить&nbsp;расчет</a>
+															<div class="headerBlock__price">
+																<svg class="icon icon-clock ">
+																	<use xlink:href="img/svg/sprite.svg#clock"></use>
+																</svg>
+																<div class="h6">Вы получите точную стоимость в течении <strong>1&nbsp;часа!</strong></div>
+															</div>
+														</div>
+													</div>
+													<div class="col d-none d-lg-block">
+														<div class="headerBlock__pic"><img class="headerBlock__img res-i" src="img/@2x/headerImg-5.png" alt="" role="presentation"/>
+														</div>
+													</div>
+												</div>
+												<div class="headerBlock__swiperButton">
+													<div class="swiper-button-prev"><span>назад</span><img src="img/@2x/arrow-l.png" alt=""/></div>
+													<div class="swiper-button-next"><span>вперед</span><img src="img/@2x/arrow-r.png" alt=""/></div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="row">
+													<div class="col-lg-7">
+														<div class="headerBlock__links"><a class="headerBlock__linkItem" href="#">Аналоги Swagelok</a><a class="headerBlock__linkItem" href="#">Аналоги Hy Lok</a><a class="headerBlock__linkItem" href="#">Аналоги Parker</a>
+														</div>
+														<h1>Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.</h1>
+														<div class="h5">В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры</div>
+														<div class="headerBlock__buttonWrap"><a class="headerBlock__calc btn btn-grad link-modal" href="#modal-call">Получить&nbsp;расчет</a>
+															<div class="headerBlock__price">
+																<svg class="icon icon-clock ">
+																	<use xlink:href="img/svg/sprite.svg#clock"></use>
+																</svg>
+																<div class="h6">Вы получите точную стоимость в течении <strong>1&nbsp;часа!</strong></div>
+															</div>
+														</div>
+													</div>
+													<div class="col d-none d-lg-block">
+														<div class="headerBlock__pic"><img class="headerBlock__img res-i" src="img/@2x/headerImg-6.png" alt="" role="presentation"/>
+														</div>
+													</div>
+												</div>
+												<div class="headerBlock__swiperButton">
+													<div class="swiper-button-prev"><span>назад</span><img src="img/@2x/arrow-l.png" alt=""/></div>
+													<div class="swiper-button-next"><span>вперед</span><img src="img/@2x/arrow-r.png" alt=""/></div>
 												</div>
 											</div>
 							</div>
 						</div>
+						<div class="swiper-pagination swiper-pagination--head"></div>
 					</div>
 				</div>
 				<!-- end headerBlock-->
 			</section>
 			<!-- end header-->
+			<!-- start sPrice-->
+			<section class="sPrice section" id="sPrice">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sPrice</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sPrice-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">
@@ -272,20 +315,42 @@
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
+						<div class="form-wrap__formTitle ttu">Получить расчет
 						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						<div class="h6">Оставьте заявку на&nbsp;расчет, и&nbsp;мы перезвоним&nbsp;Вам в&nbsp;течении 10&nbsp;минут!</div>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<div class="form-wrap__inputWrap">
+						<svg class="icon icon-user ">
+							<use xlink:href="img/svg/sprite.svg#user"></use>
+						</svg>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__title">Ваше имя:</span><input class="form-wrap__input form-control" type="text" placeholder="Иванов Иван" name="text" required="required"/> 
+							</label> 
+						</div>
+						<!-- +e.input-wrap-->
 					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+					<div class="form-wrap__inputWrap">
+						<svg class="icon icon-phone-modal ">
+							<use xlink:href="img/svg/sprite.svg#phone-modal"></use>
+						</svg>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__title">Ваш номер телефона:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7(___)___-__-__" name="tel" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
 					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
+					<div class="form-wrap__inputWrap">
+						<svg class="icon icon-mail ">
+							<use xlink:href="img/svg/sprite.svg#mail"></use>
+						</svg>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__title">E-mail:</span><input class="form-wrap__input form-control" type="email" placeholder="example@mail.com" name="email" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
 					</div>
+					<button class="form-wrap__btn btn-grad" type="submit">Получить расчет
+					</button>
 				</form>
 			</div>
 			<!-- #modal-call-->

@@ -2,6 +2,8 @@
 	// display: block;
 	width: 100%;
 	position: relative;
+	max-width: rem(327);
+	padding: rem(30) rem(26) rem(26);
 
 	.modal-content {
 		// max-width: 485px;
@@ -13,6 +15,57 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+
+	.h6 {
+		padding-bottom: rem(10);
+	}
+
+	.form-wrap {
+
+		&__formTitle {
+			font-weight: bold;
+			font-size: rem(27px);
+			margin-bottom: rem(10);
+		}
+
+		&__inputWrap {
+			position: relative;
+
+			.icon {
+				color: $primary;
+				position: absolute;
+				right: 5%;
+				bottom: 16%;
+				font-size: rem(15);
+			}
+		}
+
+		&__title {
+			font-weight: 500;
+			font-size: rem(16);
+			margin-bottom: rem(8);
+			display: block;
+		}
+
+		&__input {
+			padding: rem(19) rem(25);
+			border-radius: 3px;
+			border: 1px solid #E9E9E9;
+			background-color: #F9F9F9;
+			font-size: rem(16);
+		}
+
+		&__btn {
+			width: 100%;
+			padding: rem(25);
+			border: none;
+		}
+	}
+}
+
+.fancybox-bg {
+	background-color: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(100px)
 }
 
 a {

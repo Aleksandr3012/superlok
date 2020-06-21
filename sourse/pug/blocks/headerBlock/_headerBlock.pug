@@ -2,13 +2,12 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			.swiper-pagination.swiper-pagination--head
 			.headerSlider.swiper-container
 				.swiper-wrapper
 					mixin slide(im)
 						.swiper-slide
 							.row
-								.col-lg-6
+								.col-lg-7
 									+e.links
 										+e.linkItem(href="#") Аналоги Swagelok
 										+e.linkItem(href="#") Аналоги Hy Lok
@@ -16,24 +15,31 @@ mixin headerBlock()
 									h1 Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.
 									.h5 В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры
 									+e.buttonWrap
-										+e.calc.btn.btn-grad.link-modal(href="#") Получить расчет
+										+e.calc.btn.btn-grad.link-modal(href="#modal-call") Получить&nbsp;расчет
 										+e.price
 											+icon('clock')
-											.h6 Вы получите точную стоимость в течении #[strong 1 часа!]
-								.col
+											.h6 Вы получите точную стоимость в течении #[strong 1&nbsp;часа!]
+								.col.d-none.d-lg-block
 									+e.pic
-										+e.IMG.img.res-i(src="img/@2x/headerImg-1.png", alt="")
-							.swiper-button-next
-								span вперед
-								+icon('arrow-r')
-							.swiper-button-prev
-								span назад
-								+icon('arrow-l')
+										+e.IMG.img.res-i(src=`img/@2x/headerImg-${im}.png`, alt="")
+							+e.swiperButton
+								.swiper-button-prev
+									span назад
+									img(src="img/@2x/arrow-l.png", alt="")
+									//- +icon('arrow-l')
+								.swiper-button-next
+									span вперед
+									img(src="img/@2x/arrow-r.png", alt="")
+									//- +icon('arrow-r')
 
-					+slide('')
-					+slide('')
-					+slide('')
-					+slide('')
+					+slide('1')
+					+slide('2')
+					+slide('3')
+					+slide('4')
+					+slide('5')
+					+slide('6')
+			.swiper-pagination.swiper-pagination--head
+
 
 
 
