@@ -8,7 +8,7 @@
 	position: relative;
 
 	.container {
-		position: relative;
+		// position: relative;
 		@include media-breakpoint-up(xl) {
 			max-width: 1200px;
 		}
@@ -30,6 +30,9 @@
 		background-color: #e1e9f3;
 		margin-right: rem(18);
 		color: $blue;
+		display: block;
+		max-width: rem(150);
+		margin-bottom: rem(10);
 		padding: rem(9) rem(17);
 		text-decoration: none !important;
 
@@ -91,6 +94,7 @@
 		}
 
 	&__links {
+		display: flex;
 		margin-bottom: rem(40);
 	}
 
@@ -227,7 +231,7 @@
 }
 
 .swiper-pagination--head {
-	@include media-breakpoint-up(xl) {
+	@media (min-width:1450px) {
 		position: absolute;
 		right: -4%;
 		top: 33%;
@@ -240,7 +244,7 @@
 	.dots {
 		margin-left: rem(50);
 		position: relative;
-		@include media-breakpoint-down(lg) {
+		@media (max-width:1450px) {
 			display: none;
 		}
 
@@ -261,7 +265,7 @@
 		// }
 
 		&::before {
-			@include media-breakpoint-up(xl) {
+			@media (min-width:1450px) {
 				content: '';
 			}
 			@include a-cent(y);
