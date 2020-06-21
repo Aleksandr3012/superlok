@@ -122,13 +122,8 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-<<<<<<< HEAD
 	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/desktop.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
-=======
-
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main320.jpg);"></div>'); // /добавляет подложку для pixel perfect
->>>>>>> d403ea4fbe0af9f2094560a38e5a0771977d344f
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
