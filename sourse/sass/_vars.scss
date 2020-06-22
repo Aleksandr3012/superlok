@@ -143,10 +143,10 @@ $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
 
 // title
-$h1-font-size: rem(60px) !default;
-$h2-font-size: rem(50px) !default;
+$h1-font-size: rem(60px * .8) !default;
+$h2-font-size: rem(50px * .8) !default;
 $h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: rem(20px) !default;
+$h4-font-size: rem(20px * .8) !default;
 $h5-font-size: rem(18px) !default;
 $h6-font-size: rem(16px) !default;
 

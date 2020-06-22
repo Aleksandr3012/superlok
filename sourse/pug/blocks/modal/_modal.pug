@@ -38,8 +38,8 @@ mixin modal()
 		+form-wrap()(id="modal-call" class="modal-win modal-form" )
 			.modal-container
 				.text-center
-					+e.title.h3.ttu Оставить отзыв
-					p.after-headline Прикрепите документ отзыва в PDF-формате для корректного отображения
+					+e.title.h3.ttu 
+					p.after-headline 
 				+input2('Иван Иванов','text',"Ваше Имя")(required class="form-control-lg")
 					.icon-cont
 						+icon('mod-win-user')
@@ -55,12 +55,36 @@ mixin modal()
 					+e.filename
 				input.btn(type="submit" value="Опубликовать отзыв")
 
-		//- Получить расчет
+		//- //- Получить расчет
+		//- +form-wrap()(id="modal-call-2" class="modal-win modal-form" )
+		//- 	.modal-container
+		//- 		.text-center
+		//- 			+e.title.h3.ttu 
+		//- 			p.after-headline 
+		//- 		+input2('Иван Иванов','text',"Ваше Имя")(required class="form-control-lg")
+		//- 			.icon-cont
+		//- 				+icon('mod-win-user')
+		//- 		+input2('+7 (___) ___ - __ - __','tel',"Ваш номер телефона:")(required class="form-control-lg")
+		//- 			.icon-cont
+		//- 				+icon('phone-modal')
+		//- 		+input2('example@mail.com','email',"E-mail:")(required class="form-control-lg")
+		//- 			.icon-cont
+		//- 				+icon('mod-win-dog')
+		//- 		//- +b.add-file
+		//- 			label
+		//- 				input(type="file")
+		//- 				+e.SPAN.btn-file
+		//- 					+icon('mod-win-pdf')
+		//- 					| Прикрепить документ отзыва
+		//- 			+e.filename
+		//- 		input.btn(type="submit" value="Получить расчет")
+
+		//- Запросить цену
 		+form-wrap()(id="modal-call-2" class="modal-win modal-form" )
 			.modal-container
 				.text-center
-					+e.title.h3.ttu Получить расчет
-					p.after-headline Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!
+					+e.title.h3.ttu 
+					p.after-headline 
 				+input2('Иван Иванов','text',"Ваше Имя")(required class="form-control-lg")
 					.icon-cont
 						+icon('mod-win-user')
@@ -77,54 +101,30 @@ mixin modal()
 							+icon('mod-win-pdf')
 							| Прикрепить документ отзыва
 					+e.filename
-				input.btn(type="submit" value="Получить расчет")
+				input.btn(type="submit" value="")
 
-		//- Запросить цену
-		+form-wrap()(id="modal-call-3" class="modal-win modal-form" )
-			.modal-container
-				.text-center
-					+e.title.h3.ttu Запросить цену
-					p.after-headline Оставьте заявку на запрос цены, и мы перезвоним Вам в течении 10&nbsp;минут!
-				+input2('Иван Иванов','text',"Ваше Имя")(required class="form-control-lg")
-					.icon-cont
-						+icon('mod-win-user')
-				+input2('+7 (___) ___ - __ - __','tel',"Ваш номер телефона:")(required class="form-control-lg")
-					.icon-cont
-						+icon('phone-modal')
-				+input2('example@mail.com','email',"E-mail:")(required class="form-control-lg")
-					.icon-cont
-						+icon('mod-win-dog')
-				//- +b.add-file
-					label
-						input(type="file")
-						+e.SPAN.btn-file
-							+icon('mod-win-pdf')
-							| Прикрепить документ отзыва
-					+e.filename
-				input.btn(type="submit" value="Запросить цену")
-
-		//- Запросить каталог
-		+form-wrap()(id="modal-call-4" class="modal-win modal-form" )
-			.modal-container
-				.text-center
-					+e.title.h3.ttu Запросить каталог
-					p.after-headline Оставьте заявку на запрос каталога, и мы перезвоним Вам в течении 10&nbsp;минут!
-				+input2('Иван Иванов','text',"Ваше Имя")(required class="form-control-lg")
-					.icon-cont
-						+icon('mod-win-user')
-				+input2('+7 (___) ___ - __ - __','tel',"Ваш номер телефона:")(required class="form-control-lg")
-					.icon-cont
-						+icon('phone-modal')
-				+input2('example@mail.com','email',"E-mail:")(required class="form-control-lg")
-					.icon-cont
-						+icon('mod-win-dog')
-				//- +b.add-file
-					label
-						input(type="file")
-						+e.SPAN.btn-file
-							+icon('mod-win-pdf')
-							| Прикрепить документ отзыва
-					+e.filename
-				input.btn(type="submit" value="Запросить каталог")
+		//- //- Запросить каталог
+		//- +form-wrap()(id="modal-call-4" class="modal-win modal-form" )
+		//- 	.modal-container
+		//- 		.text-center
+		//- 			+e.title.h3.ttu 
+		//- 			p.after-headline 
+		//- 		+input2('Иван Иванов','text',"Ваше Имя")(required class="form-control-lg")
+		//- 			.icon-cont
+		//- 				+icon('mod-win-user')
+		//- 		+input2('+7 (___) ___ - __ - __','tel',"Ваш номер телефона:")(required class="form-control-lg")
+		//- 			.icon-cont
+		//- 				+icon('phone-modal')
+		//- 		+input2('example@mail.com','email',"E-mail:")(required class="form-control-lg")
+		//- 			.icon-cont
+		//- 				+icon('mod-win-dog')
+		//- 		//- +b.add-file
+		//- 			label
+		//- 				input(type="file")
+		//- 				+e.SPAN.btn-file
+		//- 					+icon('mod-win-pdf')
+		//- 					| Прикрепить документ отзыва
+		//- 			+e.filename
+		//- 		input.btn(type="submit" value="Запросить каталог")
 		// #modal-call
 	// modal

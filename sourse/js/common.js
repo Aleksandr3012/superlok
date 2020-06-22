@@ -37,6 +37,20 @@ const JSCCommon = {
 				},
 			},
 		});
+		$(".link-modal").click(function(){
+			let th= $(this);
+			let modal = $(th.attr('href'));
+			let content = {
+				title : th.data('title'),
+				text : th.data('text'),
+				btn : th.data('btn'),
+				order : th.data('order')
+			}
+			modal.find('.ttu').html(content.title);
+			modal.find('.after-headline').html(content.text);
+			modal.find('.btn').val(content.btn);
+			modal.find('.order').html(content.order);
+		})
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		})

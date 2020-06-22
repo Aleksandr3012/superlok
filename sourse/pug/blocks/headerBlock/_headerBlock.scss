@@ -12,6 +12,9 @@
 	// background-color: #000000;
 	position: relative;
 
+	@media (min-width: 1200px) and (max-width: 1440px) {
+		padding-top: rem(60);
+	}
 	.container {
 		// position: relative;
 		@include media-breakpoint-up(xl) {
@@ -29,6 +32,10 @@
 		}
 		@include media-breakpoint-down(md) {
 			font-size: rem(30);
+		}
+
+		@media (min-width: 1200px) and (max-width: 1440px) {
+			font-size: rem(50);
 		}
 	}
 
@@ -108,6 +115,9 @@
 
 			.icon {
 				font-size: rem(70);
+				@include media-breakpoint-up(sm) {
+					font-size: rem(50);
+				}
 				margin-right: rem(15);
 				@include media-breakpoint-up(md) {
 					font-size: rem(60);
@@ -135,6 +145,9 @@
 	&__pic {
 		// height: 100%;
 		min-height: rem(600);
+		@media (min-width: 1200px) and (max-width: 1440px) {
+			min-height: rem(450);
+		}
 		position: relative;
 		width: 100%;
 		height: 100%;
@@ -147,6 +160,9 @@
 		img {
 			@include a-cent;
 			max-width: 150%;
+			@media (min-width: 1200px) and (max-width: 1440px) {
+				max-width: 120%;
+			}
 		}
 	}
 
@@ -155,6 +171,9 @@
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(40);
 			padding-bottom: rem(60);
+		}
+		@media (min-width: 1200px) and (max-width: 1440px) {
+			padding-bottom: rem(30);
 		}
 	}
 
@@ -194,6 +213,9 @@
 		margin-top: rem(25);
 		@include media-breakpoint-up(xl) {
 			margin-top: rem(-95);
+		}
+		@media (min-width: 1200px) and (max-width: 1440px) {
+			margin-top: rem(-20);
 		}
 		color: $body-color;
 		// top: 105%;
@@ -284,6 +306,7 @@
 	.puginDot {
 		background-color: $secondary;
 		@include a-cent;
+		@include mt;
 		width: rem(8);
 		height: rem(8);
 		border-radius: 50%;
@@ -291,6 +314,7 @@
 		&::after {
 			content: '';
 			@include a-cent;
+			@include mt;
 			width: rem(26px);
 			height: rem(26px);
 			border: 1px solid rgba(6, 113, 182, 0.3);
@@ -309,11 +333,17 @@
 	}
 
 	.swiper-pagination-bullet {
+		@include mt;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(30);
 		}
+		@media (max-width:1450px) {
+			margin-left: rem(14);
+			margin-right: rem(14);
+		}
 		@include media-breakpoint-down(lg) {
 			margin-top: rem(15);
+
 		}
 		// width: rem(8);
 		// height: rem(8);
@@ -343,7 +373,7 @@
 			background-color: $primary;
 		}
 
-		&-active {
+		&-active, &:hover {
 			// background-color: $primary;
 			// width: rem(12);
 			// height: rem(12);
@@ -357,6 +387,8 @@
 				}
 			}
 		}
+
+		
 
 		// .dots {}
 

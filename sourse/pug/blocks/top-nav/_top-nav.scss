@@ -5,6 +5,10 @@
 		padding-top: rem(26);
 		padding-bottom: rem(26px);
 	}
+	@media (min-width: 1200px) and (max-width: 1440px) {
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+	}
 	position: fixed;
 	background-color: #EDF5FE;
 	// background-color: $body-bg;
@@ -82,7 +86,7 @@
 		span {
 			display: none;
 		}
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			span {
 				display: block;
 			}
@@ -92,7 +96,7 @@
 		}
 
 		// @media (min-width: 1200px) and (max-width: 1440px){}
-		@media (min-width:1500px) {
+		@media (min-width:1325px) {
 			span {
 				display: block;
 			}

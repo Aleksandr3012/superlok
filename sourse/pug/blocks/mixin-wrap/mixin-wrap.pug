@@ -131,13 +131,13 @@ mixin mnu()
 	-
 		var nav= {
 			"Главная":"/",
-			"Цена  ":"#",
-			"Вам выгодно":"#",
-			"Каталог продукции":"#"," О компании  ":"#",
-			"О SUPERLOCK":"#",
-			"Сравнение":"#",
-			"Партнеры и отзывы":"#",
-			"Контакты ":"#"
+			"Цена  ":"#sPrice",
+			"Вам выгодно":"#sProfitably",
+			"Каталог продукции":"#sCatalog",
+			"О SUPERLOCK":"#sBrendRepresent",
+			"Сравнение":"#sComparation",
+			"Партнеры и отзывы":"#sPartnersAndFeedBack",
+			"Контакты ":"#sContact"
 			}
 	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav

@@ -16,7 +16,7 @@ mixin mob-mnu()
 			+mnu()
 			+e.tel.h6(href="tel:8(831)423-86-95") 
 						span 8 (831) 423-86-95
-			+e.calculate.btn.link-modal(href="#modal-call-2") Получить расчет
+			+e.calculate.btn.link-modal(href="#modal-call-2" data-title="Получить расчет" data-text="Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!" data-btn="Получить расчет" data-order="Получить расчет") Получить расчет
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
@@ -36,7 +36,7 @@ mixin top-nav()
 						span 8 (831) 423-86-95
 						+icon('phone')
 				.col-auto.d-none.d-md-block
-					+e.calculate.btn.link-modal(href="#modal-call-2") Получить расчет
+					+e.calculate.btn.link-modal(href="#modal-call-2" data-title="Получить расчет" data-text="Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!" data-btn="Получить расчет" data-order="Получить расчет") Получить расчет
 				.col-auto.d-xl-none
 					+b.toggle-menu-mobile--js.d-xl-none
 						span
