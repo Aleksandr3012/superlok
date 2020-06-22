@@ -2,6 +2,10 @@
 .headerBlock {
 	margin-bottom: 1px;
 	padding-bottom: 0;
+	padding-top: calc(var(--sPT) + #{rem(60)});
+	// @include media-breakpoint-down(md) {
+	// 	padding-top: rem(30);
+	// }
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
@@ -16,9 +20,16 @@
 	}
 
 	h1 {
-		margin-bottom: rem(30);
-		line-height: 1.06;
 		font-weight: 500;
+		line-height: 1.1;
+		margin-bottom: rem(14);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
+			line-height: 1.06;
+		}
+		@include media-breakpoint-down(md) {
+			font-size: rem(30);
+		}
 	}
 
 	.h5 {
@@ -29,13 +40,20 @@
 
 	&__linkItem {
 		background-color: #e1e9f3;
-		margin-right: rem(18);
 		color: $blue;
 		display: block;
 		max-width: rem(150);
 		margin-bottom: rem(10);
-		padding: rem(9) rem(17);
 		text-decoration: none !important;
+		padding: rem(9) rem(17);
+		margin-right: rem(10);
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(18);
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: rem(12);
+		}
 
 		&:hover {
 			color: #fff;
@@ -44,7 +62,10 @@
 	}
 
 	&__buttonWrap {
-		padding-top: rem(14);
+		padding-top: rem(3);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(14);
+		}
 		display: flex;
 		align-items: center;
 		position: relative;
@@ -96,7 +117,11 @@
 
 	&__links {
 		display: flex;
-		margin-bottom: rem(15);
+		flex-wrap: wrap;
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(15);
+		}
 	}
 
 	&__pic {
@@ -118,8 +143,11 @@
 	}
 
 	.headerSlider {
-		padding-top: rem(40);
-		padding-bottom: rem(60);
+		padding-top: 0;
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(40);
+			padding-bottom: rem(60);
+		}
 	}
 
 	&__calc {
@@ -188,7 +216,8 @@
 	&__swiperButton {
 		display: flex;
 		@include media-breakpoint-down(md) {
-			justify-content: space-between;
+			justify-content: space-around;
+			margin-bottom: rem(10);
 		}
 		// margin-left: rem(30);
 	}
@@ -234,13 +263,14 @@
 .swiper-pagination--head {
 	@media (min-width:1450px) {
 		position: absolute;
-		right: -4%;
+		left: 4%;
 		top: 33%;
 		flex-direction: column;
+		width: rem(100);
 	}
 	display: flex;
 	justify-content: center;
-	z-index: -1;
+	// z-index: -1;
 	
 	.dots {
 		margin-left: rem(50);
@@ -253,8 +283,8 @@
 
 	.swiper-pagination-bullet  {
 		margin-bottom: rem(30);
-		width: rem(8);
-		height: rem(8);
+		// width: rem(8);
+		// height: rem(8);
 		position: relative;
 		background-color: $secondary;
 
@@ -262,7 +292,10 @@
 		// 	content: '';
 		// 	width: rem(8);
 		// 	height: rem(8);
-		// 	background-color: $primary;
+		// 	position: absolute;
+		// 	right: 0;
+		// 	background-color: $secondary;
+		// 	border-radius: 50%;
 		// }
 
 		&::before {
@@ -290,6 +323,8 @@
 				border: 1px solid rgba(6, 113, 182, 0.3);
 			}
 		}
+
+		// .dots {}
 
 		&:not(.swiper-pagination-bullet-active) {
 			.dots {

@@ -138,7 +138,7 @@ function eventHandler() {
 	JSCCommon.CustomInputFile();
 
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/desktop.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/mobile.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 

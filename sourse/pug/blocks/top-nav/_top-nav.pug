@@ -10,10 +10,12 @@ mixin mob-mnu()
 	//- h1= dataJson['lala'] 
 
 	+b.menu-mobile--js
-		+b.toggle-menu-mobile--js
-			span
+		//- +b.toggle-menu-mobile--js
+			//- span
 		+e.inner
 			+mnu()
+			+e.tel.h6(href="tel:8(831)423-86-95") 
+						span 8 (831) 423-86-95
 			+e.calculate.btn.link-modal(href="#") Получить расчет
 			.text-right
 	//  мобильное меню
@@ -24,7 +26,7 @@ mixin top-nav()
 			.row.justify-content-between.align-items-center
 				.col.col-xl-auto
 					+e.logo(href="/")
-						img(src="img/@2x/logo.png", alt="SUPERLOK")
+						img.res-i(src="img/@2x/logo.png", alt="SUPERLOK")
 				.col.d-none.d-xl-block
 					+mnu()
 					
