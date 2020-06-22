@@ -2,12 +2,12 @@ mixin sPrice()
 	// start sPrice
 	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
 		.container
-			img.lazy.d-none.d-xl-block(src="#" data-src="img/@2x/price.jpg", alt="")
+			img.lazy.d-none.d-xl-block(src="#" data-src="img/@2x/price.jpg", alt="" class="wow zoomInDown"  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s` )
 			+e.leftBlock
 				+b.section-title
 					h2 Низкая цена
 					+e.subtitle Почему наша цена действительно #[strong самая низкая по рынку при высоком качестве продукции?]
-				.row
+				.row(class="wow fadeInRight "  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s` )
 					.col-md-6
 						+e.numb 01
 						b Справедливая цена

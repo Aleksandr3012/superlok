@@ -326,7 +326,32 @@ function eventHandler() {
 		mobile: false
 	});
 	wow.init(); // var controller = new ScrollMagic.Controller();
-	//axilary funcs
+
+	var controller = new ScrollMagic.Controller();
+
+	function animateElem() {
+		var _TimelineMax;
+
+		// define movement of panels
+		var wipeAnimation = (_TimelineMax = new TimelineMax()).fromTo.apply(_TimelineMax, arguments); // in from left
+		// create scene to pin and link animation
+
+
+		new ScrollMagic.Scene({
+			triggerElement: this,
+			triggerHook: "onLeave",
+			duration: "100%"
+		}) // .setPin("#sBrendRepresent")
+		.setTween(wipeAnimation) // .addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
+	} //axilary funcs
+
+
+	animateElem.call('#sBrendRepresent', '.roller-img', .1, {
+		y: -150
+	}, {
+		y: 100
+	}); // animateElem('.roller-img-2');
 
 	function addZero(num) {
 		num = Number(num);

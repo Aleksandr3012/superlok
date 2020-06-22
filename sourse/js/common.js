@@ -376,7 +376,28 @@ function eventHandler() {
 	wow.init();
 	// var controller = new ScrollMagic.Controller();
 
+	var controller = new ScrollMagic.Controller();
+
+	function animateElem(){
+		// define movement of panels
+		var wipeAnimation = new TimelineMax()
+		.fromTo(...arguments) // in from left
+	 
+	// create scene to pin and link animation
+	new ScrollMagic.Scene({
+		triggerElement: this,
+		triggerHook: "onLeave",
+		duration: "100%"
+	})
+		// .setPin("#sBrendRepresent")
+		.setTween(wipeAnimation)
+		// .addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
+	}
+
 	//axilary funcs
+	animateElem.call('#sBrendRepresent', '.roller-img', .1, {y: -150}, { y: 100});
+	// animateElem('.roller-img-2');
 	function addZero(num) {
 		num = Number(num);
 		if (num >= 0 && num <=9) {
