@@ -275,7 +275,23 @@ function eventHandler() {
 	});
 	$('.prev-parnter-sl-js').click(function () {
 		partnersSlider.slidePrev();
-	}); //
+	}); //map js
+
+	/*var map;
+	let GoogleIsReady =  window.setInterval(function () {
+		if (google.maps === undefined) return
+		window.clearTimeout(GoogleIsReady);
+		//
+			function initMap() {
+			map = new google.maps.Map(document.getElementById("map"), {
+				center: { lat: -34.397, lng: 150.644 },
+				zoom: 8
+			});
+		}
+	}, 3000);*/
+
+	/**/
+	//axilary funcs
 
 	function addZero(num) {
 		num = Number(num);
