@@ -2,12 +2,12 @@ mixin sComparation()
 	// start sComparation
 	+b.SECTION.sComparation#sComparation&attributes(attributes)
 		+e.calc-wanna-fly
-			img.lazy(src="#" data-src="img/@2x/calculator.png" alt="123")
+			img.calc-img-js(src="img/@2x/calculator.png" alt="123")
 			//-.lazy(src="#" data-
 		.container
 			+b.section-title
 				h2 Сравнительная таблица бренда SUPERLOK c другими производителями
-			+e.table-cont.table-responsive
+			+e.table-cont.table-responsive(class="wow fadeInRight "  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s` )
 				+e.TABLE.char-table.table
 					+e.THEAD.table-header
 						tr

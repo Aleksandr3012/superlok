@@ -300,8 +300,7 @@ function eventHandler() {
 		if (google.maps === undefined) return
 		window.clearTimeout(GoogleIsReady);
 		//
-	
-		function initMap() {
+			function initMap() {
 			map = new google.maps.Map(document.getElementById("map"), {
 				center: { lat: -34.397, lng: 150.644 },
 				zoom: 8
@@ -327,12 +326,11 @@ function eventHandler() {
 	});
 	wow.init(); // var controller = new ScrollMagic.Controller();
 
-	var controller = new ScrollMagic.Controller();
-
 	function animateElem() {
 		var _TimelineMax;
 
-		// define movement of panels
+		var controller = new ScrollMagic.Controller(); // define movement of panels
+
 		var wipeAnimation = (_TimelineMax = new TimelineMax()).fromTo.apply(_TimelineMax, arguments); // in from left
 		// create scene to pin and link animation
 
@@ -342,7 +340,7 @@ function eventHandler() {
 			triggerHook: "onLeave",
 			duration: "100%"
 		}) // .setPin("#sBrendRepresent")
-		.setTween(wipeAnimation) // .addIndicators() // add indicators (requires plugin)
+		.setTween(wipeAnimation).addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
 	} //axilary funcs
 
@@ -351,6 +349,17 @@ function eventHandler() {
 		y: -150
 	}, {
 		y: 100
+	});
+	animateElem.call('#sBrendRepresent', '.calc-img-js', .1, {
+		y: -250,
+		x: 20,
+		opacity: 0.75,
+		rotate: 100
+	}, {
+		y: 50,
+		x: -25,
+		opacity: 1,
+		rotate: 0
 	}); // animateElem('.roller-img-2');
 
 	function addZero(num) {

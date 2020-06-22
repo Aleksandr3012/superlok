@@ -6,7 +6,7 @@ mixin sPartnersAndFeedBack()
 				h2 Партнеры и отзывы
 				//-+e.slider-block
 					.container
-		+e.slider-controll-bl
+		+e.slider-controll-bl(class="wow fadeInLeft "  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s`)
 			.container
 				+e.after-headline-txt
 					p Мы сотрудничаем с ведущими компаниями и они нас рекомендуют. Среди них:
@@ -16,7 +16,7 @@ mixin sPartnersAndFeedBack()
 					+logoItem(3)
 					+logoItem(4)
 					+logoItem(5)
-				+b.partners-slider-container
+				+b.partners-slider-container(class="wow fadeInRight"  data-wow-delay=`1.2s` data-wow-duration=`${dur }s` )
 					+e.background-brick
 					.swiper-container.partners-slider-container-js
 						.swiper-wrapper
