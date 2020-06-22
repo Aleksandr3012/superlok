@@ -23,6 +23,7 @@ $black: #000 !default;
 $grays: () !default;
 
 $footer-blue: #155286;
+$red-inp-file: #EA564D !default;
 
 $blue: #00437d !default;
 $indigo: #6610f2 !default;
@@ -55,6 +56,7 @@ $theme-colors: map-merge(("primary": $primary,
     "secondary": $secondary,
     "success": $success,
     "accent": $success,
+    "redfile" : $red-inp-file,
     // "info":       $info,
     // "warning":    $warning,
     "danger": $danger,

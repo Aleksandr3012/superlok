@@ -8,6 +8,9 @@ include ../blocks/sPrice/_sPrice.pug
 include ../blocks/sProfitably/_sProfitably.pug
 
 include ../blocks/sPartnersAndFeedBack/_sPartnersAndFeedBack.pug
+include ../blocks/sComparation/_sComparation.pug
+
+include ../blocks/sBrendRepresent/_sBrendRepresent.pug
 
 block variables
 	- let  mainPage= null
@@ -25,6 +28,8 @@ block pagecontent
 	+sProfitably()
 	+sCatalog()
 	+sForm()
+	+sBrendRepresent()
+	+sComparation()
 	+sPartnersAndFeedBack()
 	+sContact()
 	+footer()
