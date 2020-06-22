@@ -82,7 +82,16 @@
 		span {
 			display: none;
 		}
+		@include media-breakpoint-down(md) {
+			span {
+				display: block;
+			}
+			.icon {
+				display: none;
+			}
+		}
 
+		// @media (min-width: 1200px) and (max-width: 1440px){}
 		@media (min-width:1500px) {
 			span {
 				display: block;

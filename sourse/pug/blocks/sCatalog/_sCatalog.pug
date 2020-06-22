@@ -4,14 +4,14 @@ mixin sCatalog()
 		.container
 			+b.section-title
 				h2 Каталог продукции
-				+e.catalog.d-none.d-md-flex.btn-grad.link-modal(href="#") Запросить каталог
+				+e.catalog.d-none.d-md-flex.btn-grad.link-modal(href="#modal-call-4") Запросить каталог
 			.row
 				mixin catalogItem(img,title,text)
 					+e.catalogItem
 						img.res-i.lazy(src="#" data-src=`img/@2x/catalog-${img}.png` alt="")
 						.h3= title
 						p= text
-						a.h6.text-primary(href="#") Узнать больше
+						a.h6.text-primary.link-modal(href="#modal-call-4") Узнать больше
 				.col-md-6.col-xl-4
 					+catalogItem('1','Фитинги','Для металлических, металопластиковых и полипропиленовых труб в ассортименте')
 				.col-md-6.col-xl-4

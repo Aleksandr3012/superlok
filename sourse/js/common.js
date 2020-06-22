@@ -89,13 +89,13 @@ const JSCCommon = {
 
 				});
 			})
-			document.addEventListener('mouseup', function (event) {
-				let container = event.target.closest(".menu-mobile--js.active"); // (1)
-				if (!container) {
-					_this.closeMenu();
+			// document.addEventListener('mouseup', function (event) {
+			// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+			// 	if (!container) {
+			// 		_this.closeMenu();
 
-				}
-			});
+			// 	}
+			// });
 		}
 	},
 	// /mobileMenu
@@ -138,7 +138,7 @@ function eventHandler() {
 	JSCCommon.CustomInputFile();
 
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/mobile.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main320.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -225,7 +225,7 @@ function eventHandler() {
 			el: '.swiper-pagination--head',
 			clickable: true,
 			renderBullet: function (index, className) {
-				return '<span class="' + className + '">' + '<span class="dots">' + (index + 1) + '</span>' + '</span>';
+				return '<div class="' + className + '"> <div class="puginDot"></div> <div class="dots"><span>0</span>' + (index + 1) + '</div>' + '</div>' ;
 			},
 		},
 

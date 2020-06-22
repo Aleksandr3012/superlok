@@ -90,15 +90,13 @@ var JSCCommon = {
 
 					_this.closeMenu();
 				});
-			});
+			}); // document.addEventListener('mouseup', function (event) {
+			// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+			// 	if (!container) {
+			// 		_this.closeMenu();
+			// 	}
+			// });
 
-			document.addEventListener('mouseup', function (event) {
-				var container = event.target.closest(".menu-mobile--js.active"); // (1)
-
-				if (!container) {
-					_this.closeMenu();
-				}
-			});
 		}
 	},
 	// /mobileMenu
@@ -130,7 +128,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.CustomInputFile(); // добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/mobile.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main320.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
@@ -193,7 +191,7 @@ function eventHandler() {
 		el: '.swiper-pagination--head',
 		clickable: true,
 		renderBullet: function renderBullet(index, className) {
-			return '<span class="' + className + '">' + '<span class="dots">' + (index + 1) + '</span>' + '</span>';
+			return '<div class="' + className + '"> <div class="puginDot"></div> <div class="dots"><span>0</span>' + (index + 1) + '</div>' + '</div>';
 		}
 	}), _Swiper)); // modal window
 	// var gets = (function () {
