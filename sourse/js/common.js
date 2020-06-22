@@ -246,18 +246,18 @@ function eventHandler() {
 	});
 	// modal window
 
-	// var gets = (function () {
-	// 	var a = window.location.search;
-	// 	var b = new Object();
-	// 	var c;
-	// 	a = a.substring(1).split("&");
-	// 	for (var i = 0; i < a.length; i++) {
-	// 		c = a[i].split("=");
-	// 		b[c[0]] = c[1];
-	// 	}
-	// 	return b;
-	// })();
-	// // form
+	var gets = (function () {
+		var a = window.location.search;
+		var b = new Object();
+		var c;
+		a = a.substring(1).split("&");
+		for (var i = 0; i < a.length; i++) {
+			c = a[i].split("=");
+			b[c[0]] = c[1];
+		}
+		return b;
+	})();
+	// form
 
 	$("form").submit(function (e) {
 		e.preventDefault();
@@ -283,6 +283,7 @@ function eventHandler() {
 				// Done Functions
 				th.trigger("reset");
 				// $.magnificPopup.close();
+				$.fancybox.close();
 				// ym(53383120, 'reachGoal', 'zakaz');
 				// yaCounter55828534.reachGoal('zakaz');
 			}, 4000);
@@ -353,6 +354,27 @@ function eventHandler() {
 	}, 3000);*/
 	/**/
 
+	let dur = .6;
+	let delay = dur;
+	$('.section-title').each(function () {
+
+		$(this).addClass("wow fadeInUp");
+		$(this).attr("data-wow-duration", dur + 's');
+		// $(this).attr("data-wow-delay", delay + 's')
+	})
+
+	$('.section-title').each(function () {
+
+		$(this).addClass("wow fadeInUp");
+		$(this).attr("data-wow-duration", dur + 's');
+		$(this).attr("data-wow-delay", delay + 's')
+	})
+
+	var wow = new WOW({
+		mobile: false
+	});
+	wow.init();
+	// var controller = new ScrollMagic.Controller();
 
 	//axilary funcs
 	function addZero(num) {
