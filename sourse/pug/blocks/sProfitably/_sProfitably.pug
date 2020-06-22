@@ -1,0 +1,27 @@
+mixin sProfitably()
+	// start sProfitably
+	+b.SECTION.sProfitably.section#sProfitably&attributes(attributes)
+		.container
+			+b.section-title
+				h2 #[span.text-primary Вам выгодно,] потому что
+			mixin item(n,title,text)
+				+e.item
+					+e.numb= n
+					img.res-i(src=`img/@2x/pipe-${n}.png`, alt="")
+					.h4.text-primary= title
+					.h6= text
+			.row
+				+e.col.col-md-6.col-xl-auto
+					+item('01','Огромный ассортимент','150 000 наименований разнообразных товаров')
+				+e.col.col-md-6.col-xl-auto
+					+item('02','Всегда в наличии','50 000 в наличии на складе в Москве и Нижнем Новгороде')
+				+e.colXl.col-md-6.col-xl-auto
+					+item('03','Бесплатная доставка товара','Доставка за наш счет! Мы бесплатно доставим продукцию в ваш регион в минимальные сроки и без задержек')
+				+e.col.col-md-6.col-xl-auto
+					+item('04','Отсутствие брака','У нас нет рекламаций за последние 5 лет работы! Можете проверить сами!')
+				+e.colXl.col-md-6.col-xl-auto
+					+item('05','Сервис для покупателей','Техподдержка и консультации по продукции на протяжении всего сотрудничества с клиентом - бесплатно!')
+				+e.col.col-md-6.col-xl-auto
+					+item('06','Высокое качество','Лучшее соотношение стоимости к качеству продукции при прочих равных характеристиках')
+
+	// end sProfitably

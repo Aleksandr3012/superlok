@@ -1,0 +1,28 @@
+mixin sCatalog()
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Каталог продукции
+				+e.catalog.d-none.d-md-flex.btn-grad.link-modal(href="#") Запросить каталог
+			.row
+				mixin catalogItem(img,title,text)
+					+e.catalogItem
+						img.res-i.lazy(src="#" data-src=`img/@2x/catalog-${img}.png` alt="")
+						.h3= title
+						p= text
+						a.h6.text-primary(href="#") Узнать больше
+				.col-md-6.col-xl-4
+					+catalogItem('1','Фитинги','Для металлических, металопластиковых и полипропиленовых труб в ассортименте')
+				.col-md-6.col-xl-4
+					+catalogItem('2','Шаровые краны','В каталоге интернет-магазина вы найдете шаровые краны в разных исполнениях')
+				.col-md-6.col-xl-4
+					+catalogItem('3','Игольчатые вентили','Изделия находят свое применение в разных отраслях промышленности')
+				.col-md-6.col-xl-4
+					+catalogItem('4','Игольчатые клапаны','У нас можно выгодно приобрести регулируемые  игольчатые клапаны ')
+				.col-md-6.col-xl-4
+					+catalogItem('5','Импульсные трубки','Изготовление трубок под заказ, а также в наличии готовые изделия продукции')
+				.col-md-6.col-xl-4
+					+catalogItem('6','Регуляторы давления','Регуляторы давления для различных узлов закрытого типа трубопровода')
+
+	// end sCatalog

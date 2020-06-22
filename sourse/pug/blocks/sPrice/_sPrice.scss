@@ -1,7 +1,122 @@
-
 	// start .sPrice
-	.sPrice {
-		 
+.sPrice {
+	@include media-breakpoint-down(lg) {
+		text-align: center;
+	}
+	&__numb {
+		line-height: 2;
+		font-size: rem(66px);
+		color: rgba(255, 255, 255, 0.42);
+		position: relative;
+
+
+		&::before {
+			@include media-breakpoint-up(md) {
+				content: '';
+			}
+			position: absolute;
+			top: -3px;
+			left: 0;
+			width: 37px;
+			height: 6px;
+			background-color: #fff;
+			border-radius: 2px;
+		}
+
+		&--empty {
+			&::before {
+				left: rem(97);
+			}
+		}
+	}
+
+	img {
+		position: absolute;
+		z-index: -2;
+		right: rem(11px);
+		top: rem(30);
+	}
+
+	.container {
+		position: relative;
+		@include media-breakpoint-up(xl) {
+			max-width: 1380px;
+		}
+	}
+
+	h2 {
+		color: #fff;
+		margin-bottom: rem(23);
+	}
+
+	.section-title {
+		position: relative;
+		@include media-breakpoint-up(md) {
+			padding-bottom: calc(var(--sTPB) + #{rem(35)});
+		}
+
+
+		&::before {
+			@include media-breakpoint-up(md) {
+				content: '';
+			}
+			width: 150%;
+			height: 1px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			border-bottom: 2px dashed rgba(255, 255, 255, 0.29);
+		}
+
+		&__subtitle {
+			color: #fff;
+			font-size: rem(16);
+			@include media-breakpoint-up(md) {
+				font-size: rem(23);
+			}
+			max-width: rem(600);
+		}
+
+		strong {
+			text-transform: uppercase;
+		}
+	}
+
+	b {
+		font-weight: 600;
+		color: #fff;
+		font-size: rem(24);
+		margin-bottom: rem(8);
+		display: block;
+	}
+
+	.h4  {
+		color: #fff;
+		max-width: rem(300);
+		@include media-breakpoint-down(lg) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		line-height: 1.4;
+		letter-spacing: rem(-0.5);
+	}
+
+	&__price {
+		margin-top: rem(37);
+		margin-bottom: rem(13);
+		@include media-breakpoint-down(lg) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__leftBlock {
+		overflow: hidden;
+		position: relative;
+		padding: rem(60) rem(90);
+		max-width: rem(1007px);
+		background: linear-gradient(89.61deg, #155286 0.23%, #1975B1 99.76%);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

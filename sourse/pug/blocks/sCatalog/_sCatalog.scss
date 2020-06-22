@@ -1,0 +1,114 @@
+	// start .sCatalog
+.sCatalog {
+	padding-top: rem(10);
+	.section-title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&__catalog {
+			width: rem(262);
+			justify-content: center;
+			align-items: center;
+			padding: rem(23.5px);
+			text-decoration: none !important;
+		}
+	}
+
+	.container {
+		position: relative;
+		@include media-breakpoint-up(xl) {
+			max-width: 1200px;
+		}
+	}
+	
+	h2 {
+		margin-bottom: 0;
+	}
+
+	.h3 {
+		// margin-top: rem(-53);
+		font-size: rem(21);
+		margin-bottom: rem(14);
+	}
+
+	p {
+		max-width: rem(260);
+	}
+
+	&__catalogItem {
+		position: relative;
+		// overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid #F9F9F9;
+		border-radius: 3px;
+		margin-bottom: rem(15);
+		height: calc(100% - #{rem(25)});
+		padding: rem(173) rem(17) rem(26) rem(34);
+		@include mt;
+
+
+		&:hover, &:focus {
+			// padding-bottom: rem(36);
+			// border-bottom: transparent;
+			.h6 {
+				transform: scale(1);
+				opacity: 1;
+				bottom: rem(-37);
+			}
+			box-shadow: 0px 22px 54px rgba(0, 67, 125, 0.1);
+		}
+	}
+
+	.h6 {
+		position: absolute;
+		z-index: 1;
+		padding-bottom: rem(24);
+		padding-left: rem(34);
+		left: 0;
+		display: block;
+		width: 100%;
+		background-color: #fff;
+		border-bottom: 1px solid #F9F9F9;
+		bottom: rem(-5);
+		opacity: 0;
+		text-decoration: none !important;
+		// transform: scale(1, 0);
+		@include mt;
+	}
+
+	img {
+		// margin-left: auto;
+		max-width: rem(280);
+		position: absolute;
+		right: 0;
+		top: rem(20);
+	}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sCatalog

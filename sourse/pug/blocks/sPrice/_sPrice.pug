@@ -2,8 +2,23 @@ mixin sPrice()
 	// start sPrice
 	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sPrice
+			img.lazy.d-none.d-xl-block(src="#" data-src="img/@2x/price.jpg", alt="")
+			+e.leftBlock
+				+b.section-title
+					h2 Низкая цена
+					+e.subtitle Почему наша цена действительно #[strong самая низкая по рынку при высоком качестве продукции?]
+				.row
+					.col-md-6
+						+e.numb 01
+						b Справедливая цена
+						.h4 Наша цена формируется от оборота а&nbsp;не&nbsp;от&nbsp;наценки как у других производителей!
+						+e.price.btn-white.link-modal(href="#modal-call-2") Запросить цену
+					.col-md-5
+						+e.numb 02
+						b Без наценок
+						.h4 У&nbsp;нас оптимальный штат сотрудников а&nbsp;потому нет лишних наценок
+					.col-1.d-none.d-md-block
+						+e.numb--empty
 				
-			.row
+
 	// end sPrice
