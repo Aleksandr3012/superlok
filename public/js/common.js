@@ -163,7 +163,7 @@ function eventHandler() {
 		// 
 		// скрывает моб меню
 
-		var topH = $("header ").innerHeight();
+		var topH = $(".header ").innerHeight();
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > topH) {
 				$('.top-nav  ').addClass('fixed');

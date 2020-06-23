@@ -183,7 +183,7 @@ function eventHandler() {
 		// 
 		// скрывает моб меню
 
-		const topH = $("header ").innerHeight();
+		const topH = $(".header ").innerHeight();
 
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > topH) {
