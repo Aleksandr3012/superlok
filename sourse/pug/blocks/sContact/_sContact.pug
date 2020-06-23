@@ -20,92 +20,93 @@ mixin sContact()
 							img.lazy(src="#" data-src="img/contacts_location.svg" alt="")
 						span.item-txt 603011, г. Нижний Новгород, ул. Усиевича, д. 4а
 		+e.map-cont(class="wow fadeInRight "  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s` )
-			//iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4429.306427867306!2d43.9337457234474!3d56.2840362124159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414e2a79dc7169d3%3A0xed1df6dc6dcd3505!2z0YPQuy4g0KPRgdC40LXQstC40YfQsCwgNNCQLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0J3QuNC20LXQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCA2MDMwNzY!5e0!3m2!1sru!2sua!4v1592658459163!5m2!1sru!2sua' width='800' height='480' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
-			script.
-				var map, popup, Popup;
-				function initMap() {
-					map = new google.maps.Map(document.getElementById("map"), {
-						center: {
-							lat: 56.284291,
-							lng: 43.933615
-						},
-						zoom: 17
-					});
-					var marker = new google.maps.Marker({
-					position:{
-							lat: 56.283791,
-							lng: 43.935615
-						},
-						map: map,
-						title: 'My mark',
-					});
-					//pop up
-					Popup = createPopupClass();
-					popup = new Popup(
-						new google.maps.LatLng(56.284101, 43.934450),
-						document.getElementById('map-baner'));
-					popup.setMap(map);
+			iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4429.306427867306!2d43.9337457234474!3d56.2840362124159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414e2a79dc7169d3%3A0xed1df6dc6dcd3505!2z0YPQuy4g0KPRgdC40LXQstC40YfQsCwgNNCQLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0J3QuNC20LXQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCA2MDMwNzY!5e0!3m2!1sru!2sua!4v1592658459163!5m2!1sru!2sua' width='800' height='480' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+			//- script.
+			//- 	var map, popup, Popup;
+			//- 	function initMap() {
+			//- 		map = new google.maps.Map(document.getElementById("map"), {
+			//- 			center: {
+			//- 				lat: 56.284291,
+			//- 				lng: 43.933615
+			//- 			},
+			//- 			zoom: 17
+			//- 		});
+			//- 		var marker = new google.maps.Marker({
+			//- 		position:{
+			//- 				lat: 56.283791,
+			//- 				lng: 43.935615
+			//- 			},
+			//- 			map: map,
+			//- 			title: 'My mark',
+			//- 		});
+			//- 		//pop up
+			//- 		Popup = createPopupClass();
+			//- 		popup = new Popup(
+			//- 			new google.maps.LatLng(56.284101, 43.934450),
+			//- 			document.getElementById('map-baner'));
+			//- 		popup.setMap(map);
 
-				}
-				function createPopupClass() {
-					function Popup(position, content) {
-						this.position = position;
+			//- 	}
+			//- 	function createPopupClass() {
+			//- 		function Popup(position, content) {
+			//- 			this.position = position;
 
-						content.classList.add('popup-bubble');
+			//- 			content.classList.add('popup-bubble');
 
-						// This zero-height div is positioned at the bottom of the bubble.
-						var bubbleAnchor = document.createElement('div');
-						bubbleAnchor.classList.add('popup-bubble-anchor');
-						bubbleAnchor.appendChild(content);
+			//- 			// This zero-height div is positioned at the bottom of the bubble.
+			//- 			var bubbleAnchor = document.createElement('div');
+			//- 			bubbleAnchor.classList.add('popup-bubble-anchor');
+			//- 			bubbleAnchor.appendChild(content);
 
-						// This zero-height div is positioned at the bottom of the tip.
-						this.containerDiv = document.createElement('div');
-						this.containerDiv.classList.add('popup-container');
-						this.containerDiv.appendChild(bubbleAnchor);
+			//- 			// This zero-height div is positioned at the bottom of the tip.
+			//- 			this.containerDiv = document.createElement('div');
+			//- 			this.containerDiv.classList.add('popup-container');
+			//- 			this.containerDiv.appendChild(bubbleAnchor);
 
-						// Optionally stop clicks, etc., from bubbling up to the map.
-						google.maps.OverlayView.preventMapHitsAndGesturesFrom(this.containerDiv);
-					}
+			//- 			// Optionally stop clicks, etc., from bubbling up to the map.
+			//- 			google.maps.OverlayView.preventMapHitsAndGesturesFrom(this.containerDiv);
+			//- 		}
 
-					// ES5 magic to extend google.maps.OverlayView.
-					Popup.prototype = Object.create(google.maps.OverlayView.prototype);
+			//- 		// ES5 magic to extend google.maps.OverlayView.
+			//- 		Popup.prototype = Object.create(google.maps.OverlayView.prototype);
 
-					/** Called when the popup is added to the map. */
-					Popup.prototype.onAdd = function () {
-						this.getPanes().floatPane.appendChild(this.containerDiv);
-					};
+			//- 		/** Called when the popup is added to the map. */
+			//- 		Popup.prototype.onAdd = function () {
+			//- 			this.getPanes().floatPane.appendChild(this.containerDiv);
+			//- 		};
 
-					/** Called when the popup is removed from the map. */
-					Popup.prototype.onRemove = function () {
-						if (this.containerDiv.parentElement) {
-							this.containerDiv.parentElement.removeChild(this.containerDiv);
-						}
-					};
+			//- 		/** Called when the popup is removed from the map. */
+			//- 		Popup.prototype.onRemove = function () {
+			//- 			if (this.containerDiv.parentElement) {
+			//- 				this.containerDiv.parentElement.removeChild(this.containerDiv);
+			//- 			}
+			//- 		};
 
-					/** Called each frame when the popup needs to draw itself. */
-					Popup.prototype.draw = function () {
-						var divPosition = this.getProjection().fromLatLngToDivPixel(this.position);
+			//- 		/** Called each frame when the popup needs to draw itself. */
+			//- 		Popup.prototype.draw = function () {
+			//- 			var divPosition = this.getProjection().fromLatLngToDivPixel(this.position);
 
-					// Hide the popup when it is far out of view.
-						var display =
-							Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000 ?
-								'block' :
-								'none';
+			//- 		// Hide the popup when it is far out of view.
+			//- 			var display =
+			//- 				Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000 ?
+			//- 					'block' :
+			//- 					'none';
 
-						if (display === 'block') {
-							this.containerDiv.style.left = divPosition.x + 'px';
-							this.containerDiv.style.top = divPosition.y + 'px';
-						}
-						if (this.containerDiv.style.display !== display) {
-							this.containerDiv.style.display = display;
-						}
-					};
+			//- 			if (display === 'block') {
+			//- 				this.containerDiv.style.left = divPosition.x + 'px';
+			//- 				this.containerDiv.style.top = divPosition.y + 'px';
+			//- 			}
+			//- 			if (this.containerDiv.style.display !== display) {
+			//- 				this.containerDiv.style.display = display;
+			//- 			}
+			//- 		};
 
-					return Popup;
-				}
-			script(async='', defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10&callback=initMap')
+			//- 		return Popup;
+			//- 	}
+
+			//- script(async='', defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10&callback=initMap')
 			+e.map#map
-			.map-tooltip#map-baner
-				.map-tt-header Наш офис:
-				.map-tt-txt 603011, г. Нижний Новгород, ул. Усиевича, д. 4а
+			//- .map-tooltip#map-baner
+			//- 	.map-tt-header Наш офис:
+			//- 	.map-tt-txt 603011, г. Нижний Новгород, ул. Усиевича, д. 4а
 	// end sContact

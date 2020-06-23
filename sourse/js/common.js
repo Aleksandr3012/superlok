@@ -434,6 +434,12 @@ function eventHandler() {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	});
+
+
+
+	// карта
+	
+	// /карта
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
