@@ -371,10 +371,10 @@ function eventHandler() {
 		opacity: 1
 	});
 	animateElem.call('#sPrice', '.top-fly-img-js', .1, {
-		y: -50,
+		y: 0,
 		x: 0
 	}, {
-		y: 550,
+		y: 250,
 		x: 50,
 		opacity: 1
 	});
