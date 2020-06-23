@@ -263,6 +263,17 @@
 		// margin-left: rem(30);
 	}
 
+	&__valve-price-top {
+		position: absolute;
+		// z-index: 1;
+		right: 20%;
+		bottom: -45%;
+		@include media-breakpoint-down(md) {
+			right: 20% !important;
+			bottom: -90% !important;
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

@@ -375,19 +375,19 @@ function eventHandler() {
 		x: 50,
 		opacity: 1
 	});
-	animateElem.call('#sPrice', '.top-fly-img-js', .1, {
-		y: 0,
-		x: 0
+	animateElem.call('#headerBlock', '.top-fly-img-js', .1, {
+		y: -150,
+		x: -50
 	}, {
 		y: 250,
-		x: 50,
+		x: -150,
 		opacity: 1
 	});
 	animateElem.call('#sPrice', '.bottom-fly-img-js', .1, {
 		y: -250,
 		x: -20
 	}, {
-		y: 100,
+		y: 300,
 		x: 50,
 		opacity: 1
 	}); // animateElem('.roller-img-2');

@@ -409,8 +409,8 @@ function eventHandler() {
 	animateElem.call('#sBrendRepresent', '.roller-img', .1, {y: -150}, { y: 100});
 	animateElem.call('#sBrendRepresent', '.calc-img-js', .1, {y: -250, x: 20, opacity: 0.75, rotate: 100}, { y: 50, x: -25, opacity: 1, rotate: 0});
 	animateElem.call('#sProfitably', '.fly-img-js', .1, {y: 50, x: -20}, { y: 550, x: 50, opacity: 1});
-	animateElem.call('#sPrice', '.top-fly-img-js', .1, {y: 0, x: 0,}, { y: 250, x: 50, opacity: 1});
-	animateElem.call('#sPrice', '.bottom-fly-img-js', .1, {y: -250, x: -20}, { y: 100, x: 50, opacity: 1});
+	animateElem.call('#headerBlock', '.top-fly-img-js', .1, {y: -150, x: -50,}, { y: 250, x: -150, opacity: 1});
+	animateElem.call('#sPrice', '.bottom-fly-img-js', .1, {y: -250, x: -20}, { y: 300, x: 50, opacity: 1});
 	// animateElem('.roller-img-2');
 	function addZero(num) {
 		num = Number(num);
