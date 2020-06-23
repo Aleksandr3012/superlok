@@ -151,10 +151,10 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
-		border: calc(#{rem(40px)} + 1vw) solid $primary;
-		box-shadow: 4px 4px 26px rgba(0, 67, 125, 0.24);
+		// border: calc(#{rem(40px)} + 1vw) solid $primary;
+		// box-shadow: 4px 4px 26px rgba(0, 67, 125, 0.24);
 		@include media-breakpoint-up(xl) {
-			border: rem(64px) solid $primary;
+			// border: rem(64px) solid $primary;
 		}
 
 		img {
@@ -164,6 +164,18 @@
 				max-width: 120%;
 			}
 		}
+	}
+
+	&__border {
+		border: calc(#{rem(40px)} + 1vw) solid $primary;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		box-shadow: 4px 4px 26px rgba(0, 67, 125, 0.24);
+		@include media-breakpoint-up(xl) {
+			border: rem(64px) solid $primary;
+		}
+
 	}
 
 	.headerSlider {
@@ -212,7 +224,7 @@
 	.swiper-button-next, .swiper-button-prev {
 		margin-top: rem(25);
 		@include media-breakpoint-up(xl) {
-			margin-top: rem(-95);
+			// margin-top: rem(-95);
 		}
 		@media (min-width: 1200px) and (max-width: 1440px) {
 			margin-top: rem(-20);
@@ -225,11 +237,6 @@
 		width: auto;
 		flex-direction: column;
 
-		// .icon {
-		// 	font-size: rem(30);
-		// 	color: $primary;
-		// 	display: block;
-		// }
 
 		img {
 			@include mt;
@@ -289,6 +296,8 @@
 	@include media-breakpoint-down(xs) {}
 
 }
+
+
 
 .swiper-pagination--head {
 

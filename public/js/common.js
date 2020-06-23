@@ -2,6 +2,7 @@
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+// const { EffectFade } = require("swiper/js/swiper.esm");
 var $ = jQuery;
 var JSCCommon = {
 	CustomInputFile: function CustomInputFile() {
@@ -184,7 +185,7 @@ function eventHandler() {
 
 	$(" .top-nav li a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
+		var destination = $(elementClick).offset().top - 70;
 		$('html, body').animate({
 			scrollTop: destination
 		}, 1100);
@@ -194,6 +195,7 @@ function eventHandler() {
 	var swiper4 = new Swiper('.headerSlider', (_Swiper = {
 		// slidesPerView: 5,
 		// ...defaultSl,
+		// effect: 'fade',
 		loop: true,
 		slidesPerView: 1,
 		watchOverflow: true,

@@ -1,3 +1,5 @@
+// const { EffectFade } = require("swiper/js/swiper.esm");
+
 const $ = jQuery;
 const JSCCommon = {
 	CustomInputFile: function CustomInputFile() {
@@ -208,7 +210,7 @@ function eventHandler() {
 	// листалка по стр
 	$(" .top-nav li a, .scroll-link").click(function () {
 		const elementClick = $(this).attr("href");
-		const destination = $(elementClick).offset().top;
+		const destination = $(elementClick).offset().top-70;
 
 		$('html, body').animate({ scrollTop: destination }, 1100);
 
@@ -221,6 +223,7 @@ function eventHandler() {
 	const swiper4 = new Swiper('.headerSlider', {
 		// slidesPerView: 5,
 		// ...defaultSl,
+		// effect: 'fade',
 		loop: true,
 		slidesPerView: 1,
 		watchOverflow: true,
