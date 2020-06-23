@@ -161,16 +161,24 @@
 
 	&__valve-price-bottom {
 		position: absolute;
-		z-index: 1;
+		// z-index: 1;
 		bottom: 15%;
 		left: 7%;
+		@include media-breakpoint-down(md) {
+			bottom: 15% !important;
+			left: 7% !important;
+		}
 	}
 
 	&__valve-price-top {
 		position: absolute;
-		z-index: 1;
-		right: 23%;
+		// z-index: 1;
+		right: 10%;
 		top: 0;
+		@include media-breakpoint-down(md) {
+			right: 10% !important;
+			top: 0 !important;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
