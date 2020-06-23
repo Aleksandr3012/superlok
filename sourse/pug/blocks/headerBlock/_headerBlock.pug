@@ -3,8 +3,8 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 			.headerSlider.swiper-container
 				.swiper-wrapper
-					mixin slide(im)
-						.swiper-slide
+					mixin slide(im, hash)
+						.swiper-slide(data-hash= hash)
 							.container
 
 								.row
@@ -36,12 +36,12 @@ mixin headerBlock()
 											+e.IMG.img.res-i(src=`img/@2x/headerImg-${im}.png`, alt="" class="wow fadeIn " data-wow-delay="0.7s" data-wow-duration="0.6s")
 
 
-					+slide('1')
-					+slide('2')
-					+slide('3')
-					+slide('4')
-					+slide('5')
-					+slide('6')
+					+slide('1', "class1")
+					+slide('2', "class2")
+					+slide('3', "class3")
+					+slide('4', "class4")
+					+slide('5', "class5")
+					+slide('6', "class6")
 			.swiper-pagination.swiper-pagination--head
 
 

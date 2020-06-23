@@ -200,7 +200,10 @@ function eventHandler() {
 		slidesPerView: 1,
 		watchOverflow: true,
 		spaceBetween: 50
-	}, _defineProperty(_Swiper, "watchOverflow", true), _defineProperty(_Swiper, "slidesPerGroup", 1), _defineProperty(_Swiper, "touchRatio", 0.2), _defineProperty(_Swiper, "navigation", {
+	}, _defineProperty(_Swiper, "watchOverflow", true), _defineProperty(_Swiper, "slidesPerGroup", 1), _defineProperty(_Swiper, "touchRatio", 0.2), _defineProperty(_Swiper, "hashNavigation", {
+		watchState: true,
+		replaceState: true
+	}), _defineProperty(_Swiper, "navigation", {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
 	}), _defineProperty(_Swiper, "pagination", {

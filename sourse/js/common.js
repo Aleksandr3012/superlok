@@ -232,6 +232,10 @@ function eventHandler() {
 		watchOverflow: true,
 		slidesPerGroup: 1,
 		touchRatio: 0.2,
+		hashNavigation: {
+			watchState: true,
+			replaceState: true,
+		},
 		// slideToClickedSlide: true,
 		// freeModeMomentum: true,
 		navigation: {
