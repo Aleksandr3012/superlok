@@ -1,6 +1,8 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+			+e.valve-price-top
+				img.top-fly-img-js(src="img/@2x/valve-price-top.png", alt="")
 			.headerSlider.swiper-container
 				.swiper-wrapper
 					mixin slide(im, hash)
