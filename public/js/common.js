@@ -232,13 +232,44 @@ function eventHandler() {
 	$("form").submit(function (e) {
 		e.preventDefault();
 		var th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
+		var file = th.find('[name="file"]').prop('files')[0];
+		var name = th.find('[name="name"]').val();
+		var email = th.find('[name="email"]').val();
+		var tel = th.find('[name="tel"]').val();
+		var utm_source = th.find('[name="utm_source"]').val();
+		var utm_term = th.find('[name="utm_term"]').val();
+		var utm_medium = th.find('[name="utm_medium"]').val();
+		var utm_campaign = th.find('[name="utm_campaign"]').val();
+		var order = th.find('[name="order"]').val();
+		utm_source = decodeURIComponent(gets['utm_source'] || '');
+		utm_term = decodeURIComponent(gets['utm_term'] || '');
+		utm_medium = decodeURIComponent(gets['utm_medium'] || '');
+		utm_campaign = decodeURIComponent(gets['utm_campaign'] || '');
+		var data = new FormData($('form')[0]);
+		data.append('order', order);
+		data.append('file', file);
+		data.append('name', name);
+		data.append('email', email);
+		data.append('tel', tel);
+		data.append('utm_source', utm_source);
+		data.append('utm_term', utm_term);
+		data.append('utm_medium', utm_medium);
+		data.append('utm_campaign', utm_campaign); // data = th.serialize();
+		// data.append('action_present', 'save');
+		// data.append('product_id', $product_id);
+		// data.append('title', title);
+		// data.append('description', description);
+		// data.append('publish_down', publish_down);
+		// data.append('removefile', removefile);
+		// data.append('file', $('#file_present')[0].files[0]);
+
 		$.ajax({
 			url: 'action.php',
+			dataType: 'text',
+			// what to expect back from the PHP script, if anything
+			cache: false,
+			contentType: false,
+			processData: false,
 			type: 'POST',
 			data: data
 		}).done(function (data) {
@@ -305,7 +336,8 @@ function eventHandler() {
 		if (google.maps === undefined) return
 		window.clearTimeout(GoogleIsReady);
 		//
-			function initMap() {
+	
+		function initMap() {
 			map = new google.maps.Map(document.getElementById("map"), {
 				center: { lat: -34.397, lng: 150.644 },
 				zoom: 8
