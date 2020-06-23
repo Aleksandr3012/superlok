@@ -49,7 +49,7 @@ const JSCCommon = {
 			modal.find('.ttu').html(content.title);
 			modal.find('.after-headline').html(content.text);
 			modal.find('.btn').val(content.btn);
-			modal.find('.order').html(content.order);
+			modal.find('.order').val(content.order);
 		})
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
@@ -286,7 +286,7 @@ function eventHandler() {
 				$.fancybox.close();
 				// ym(53383120, 'reachGoal', 'zakaz');
 				// yaCounter55828534.reachGoal('zakaz');
-			}, 10000);
+			}, 6000);
 		}).fail(function () { });
 
 	});
