@@ -5,7 +5,7 @@ mixin sCatalog()
 			+b.section-title
 				h2 Каталог продукции
 				+e.catalog.d-none.d-md-flex.btn-grad.link-modal(href="#modal-call-2" data-title="Запросить каталог" data-text="Оставьте заявку на запрос каталога, и мы перезвоним Вам в течении 10&nbsp;минут!" data-btn="Запросить каталог" data-order="Запросить каталог") Запросить каталог
-			.row
+			.row(class="wow fadeInUp "  data-wow-delay=`1s` data-wow-duration=`${dur }s` )
 				mixin catalogItem(img,title,text)
 					+e.catalogItem.link-modal(href="#modal-call-2" data-title="Запросить каталог" data-text="Оставьте заявку на запрос каталога, и мы перезвоним Вам в течении 10&nbsp;минут!" data-btn="Запросить каталог" data-order=`Запросить каталог - ${title}`)
 						img.res-i.lazy(src="#" data-src=`img/@2x/catalog-${img}.png` alt="")

@@ -3,6 +3,10 @@ mixin sPrice()
 	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
 		.container
 			img.lazy.d-none.d-xl-block(src="#" data-src="img/@2x/price.jpg", alt="" class="wow zoomInDown"  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s` )
+			+e.valve-price-bottom
+				img.bottom-fly-img-js.d-none.d-xl-block(src="img/@2x/valve-price-bottom.png", alt="")
+			+e.valve-price-top
+				img.top-fly-img-js.d-none.d-xl-block(src="img/@2x/valve-price-top.png", alt="")
 			+e.leftBlock
 				+b.section-title
 					h2 Низкая цена

@@ -8,6 +8,7 @@
 		padding-bottom: rem(15);
 	}
 	.container {
+		position: relative;
 		@include media-breakpoint-up(xl) {
 			max-width: 1205px;
 		}
@@ -24,6 +25,13 @@
 		}
 		position: relative;
 		height: calc(100% - #{rem(25)});
+	}
+
+	&__valve-profitably {
+		position: absolute;
+		z-index: 1;
+		right: -7%;
+		top: -4%;
 	}
 
 	&__col {
