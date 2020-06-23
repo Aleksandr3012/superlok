@@ -46,6 +46,9 @@
 		img{
 			width: 100%;
 			height: 100%;
+			@include media-breakpoint-down(md) {
+				transform: translate3d(-17.5029px, 0.0194546px, 0px) !important;
+			}
 		}
 	}
 	.section-title{
