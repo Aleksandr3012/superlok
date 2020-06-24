@@ -2,7 +2,8 @@ mixin sPrice()
 	// start sPrice
 	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
 		.container
-			img.lazy.d-none.d-xl-block(src="#" data-src="img/@2x/price.jpg", alt="" class="wow zoomInDown"  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s` )
+			+pic('price')(class="wow fadeInLeft d-none d-xl-block"  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s`)
+			//- img(src="img/@2x/price.jpg", alt=""  )
 			+e.valve-price-bottom
 				img.bottom-fly-img-js(src="img/@2x/valve-price-bottom.png", alt="")
 			+e.leftBlock
