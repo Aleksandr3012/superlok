@@ -1,5 +1,8 @@
 	// start .sPrice
 .sPrice {
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(60);
+	}
 	@include media-breakpoint-down(lg) {
 		text-align: center;
 		padding-top: rem(88);

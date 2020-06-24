@@ -2,7 +2,7 @@
 .headerBlock {
 	margin-bottom: 1px;
 	padding-bottom: 0;
-	padding-top: calc(var(--sPT) + #{rem(60)});
+	padding-top: calc(var(--sPT) + #{rem(40)});
 	// @include media-breakpoint-down(md) {
 	// 	padding-top: rem(30);
 	// }
@@ -161,7 +161,7 @@
 			@include a-cent;
 			max-width: 150%;
 			@media (min-width: 1200px) and (max-width: 1440px) {
-				max-width: 120%;
+				max-width: 85%;
 			}
 		}
 	}
@@ -180,12 +180,17 @@
 
 	.headerSlider {
 		padding-top: 0;
+		@include media-breakpoint-up(xl) {
+			padding-top: rem(80);
+			padding-bottom: rem(100);
+		}
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(40);
 			padding-bottom: rem(60);
 		}
 		@media (min-width: 1200px) and (max-width: 1440px) {
-			padding-bottom: rem(30);
+			padding-top: rem(40);
+			padding-bottom: rem(70);
 		}
 	}
 
@@ -322,6 +327,10 @@
 		top: 37%;
 		flex-direction: column;
 		width: rem(100);
+	}
+
+	@media (min-width: 1200px) and (max-width: 1440px)  {
+		margin-top: -40px;
 	}
 	display: flex;
 	justify-content: center;
