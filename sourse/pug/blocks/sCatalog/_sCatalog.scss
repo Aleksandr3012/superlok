@@ -61,10 +61,14 @@
 		@include media-breakpoint-up(md) {
 			padding: rem(173) rem(17) rem(26) rem(34);
 		}
+		.h6{
+			// background-color: transparent !important;
+		}
 		@include mt;
 
 
 		&:hover, &:focus {
+			background-color: #fff;
 			// padding-bottom: rem(36);
 			// border-bottom: transparent;
 			.h6 {

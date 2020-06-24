@@ -147,6 +147,9 @@
 		min-height: rem(600);
 		@media (min-width: 1200px) and (max-width: 1440px) {
 			min-height: rem(450);
+			img{
+				max-height: 115%;
+			}
 		}
 		position: relative;
 		width: 100%;

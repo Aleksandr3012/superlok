@@ -18,7 +18,7 @@
 		<meta property="og:image:width" content="968">
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
-		<meta name="theme-color" content="#3361d8">
+		<meta name="theme-color" content="#3361d8"><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="js/animate.css/animate.min.css"/>
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
@@ -354,7 +354,13 @@
 			<!-- end header-->
 			<!-- start sPrice-->
 			<section class="sPrice section" id="sPrice">
-				<div class="container"><img class="lazy d-none d-xl-block wow zoomInDown" src="#" data-src="img/@2x/price.jpg" alt="" data-wow-delay="0.6s" data-wow-duration="0.6s"/>
+				<div class="container">
+					<!-- picture-->
+					<picture class="lazy wow fadeInLeft d-none d-xl-block" data-wow-delay="0.6s" data-wow-duration="0.6s"> 
+						<source srcset="#" data-srcset="img/@2x/price.jpg" type="image/jpg" media="(min-width:576px)"/>
+						<source srcset="#" data-srcset="img/@1x/price.jpg" type="image/jpg"/><img src="#" data-src="img/@2x/price.jpg" alt=""/>
+					</picture>
+					<!-- /picture-->
 					<div class="sPrice__valve-price-bottom"><img class="bottom-fly-img-js" src="img/@2x/valve-price-bottom.png" alt=""/>
 					</div>
 					<div class="sPrice__leftBlock">
@@ -1139,9 +1145,9 @@
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
-						<input type="file" name="file" id="file_present"/>
 						<div class="add-file">
-							<label><span class="add-file__btn-file">
+							<label>
+								<input type="file" name="file" id="file_present"/><span class="add-file__btn-file">
 								<svg class="icon icon-mod-win-pdf ">
 									<use xlink:href="img/svg/sprite.svg#mod-win-pdf"></use>
 								</svg>Прикрепить документ отзыва</span>

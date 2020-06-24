@@ -4,6 +4,10 @@
 	position: relative;
 
 	padding-bottom: 20px;
+	.section-title{
+		position: relative;
+		z-index: 10;
+	}
 	@include media-breakpoint-up(lg){
 		padding-bottom: 66px; //116px - 50
 	}
