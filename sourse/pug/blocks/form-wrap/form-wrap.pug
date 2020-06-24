@@ -67,7 +67,7 @@ mixin select(label,pl,...items)
 //- wrapper for form
 mixin form-wrap()
 	+b.form-wrap&attributes(attributes)
-		form
+		form( enctype="multipart/form-data")
 			input(type='hidden',  name='example-input-field')
 			input(type='hidden', class="order", name='order', value=`Заявка  с сайта`) 
 			input(type="hidden" class='utm_source' name='utm_source')

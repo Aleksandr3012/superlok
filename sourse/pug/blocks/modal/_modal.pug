@@ -1,7 +1,7 @@
 
 mixin modal()
 	.d-none
-		+form-wrap()(id="modal-call" class="modal-win modal-form" enctype="multipart/form-data")
+		+form-wrap()(id="modal-call" class="modal-win modal-form"  )
 			.modal-container
 				.text-center
 					+e.title.h3.ttu 
@@ -12,9 +12,9 @@ mixin modal()
 				+input2('example@mail.com','email',"E-mail:")(required class="form-control-lg")
 					.icon-cont
 						+icon('mod-win-dog')
+				input(type="file" name="file")#file_present
 				+b.add-file
 					label
-						input(type="file" name="file")
 						+e.SPAN.btn-file
 							+icon('mod-win-pdf')
 							| Прикрепить документ отзыва

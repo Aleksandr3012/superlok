@@ -234,6 +234,7 @@
 		.tooltip{
 			top: calc(100% + 21px) !important;
 			bottom: unset !important;
+				z-index: 1;
 			&:after{
 				top: unset;
 				bottom: calc(100% - 5px);
@@ -258,7 +259,7 @@
 			background-color: $teal;
 		}
 		.tooltip{
-			z-index: 1;
+				visibility: visible;
 			opacity: 1;
 		}
 	}
@@ -266,7 +267,7 @@
 	.tooltip{
 		position: absolute;
 		border-radius: 3px;
-		z-index: -100;
+		visibility: hidden;
 
 		bottom: calc(100% + 21px);
 
@@ -284,7 +285,7 @@
 
 
 		opacity: 0;
-		@include mt();
+		// @include mt();
 
 		&:after{
 			content: '';

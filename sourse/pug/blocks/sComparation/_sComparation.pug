@@ -43,10 +43,10 @@ mixin sComparation()
 								+icon('comparation_analog')
 							+tbodyTH('replacement-col', 'Полная взаимозаменяемость с данным производителем')
 								+icon('comparation_analog')
-							+tbodyTH('delivery-time-col tooltiped-col bot-tooltip', 'Меньше чем у данного производителя', true)
+							+tbodyTH('delivery-time-col tooltiped-col bot-tooltip', 'Меньше чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
-							+tbodyTH('price-col tooltiped-col bot-tooltip', 'Ниже чем у данного производителя', true)
+							+tbodyTH('price-col tooltiped-col bot-tooltip', 'Ниже чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
 						tr
@@ -56,10 +56,10 @@ mixin sComparation()
 							+tbodyTH('replacement-col', 'Неполная взаимозаменяемость с данным производителем')
 								+e.worth-icon-cont
 									+icon('comparation_worth')
-							+tbodyTH('delivery-time-col tooltiped-col', 'Меньше чем у данного производителя', true)
+							+tbodyTH('delivery-time-col tooltiped-col', 'Меньше чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
-							+tbodyTH('price-col tooltiped-col', 'Ниже чем у данного производителя', true)
+							+tbodyTH('price-col tooltiped-col', 'Ниже чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
 						tr
@@ -68,10 +68,10 @@ mixin sComparation()
 								+icon('comparation_analog')
 							+tbodyTH('replacement-col', 'Полная взаимозаменяемость с данным производителем')
 								+icon('comparation_analog')
-							+tbodyTH('delivery-time-col tooltiped-col', 'Меньше чем у данного производителя', true)
+							+tbodyTH('delivery-time-col tooltiped-col', 'Меньше чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
-							+tbodyTH('price-col tooltiped-col', 'Ниже чем у данного производителя', true)
+							+tbodyTH('price-col tooltiped-col', 'Ниже чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
 						tr
@@ -82,29 +82,29 @@ mixin sComparation()
 								+icon('comparation_analog')
 							+tbodyTH('delivery-time-col', 'Аналогичен SUPERLOK')
 								+icon('comparation_analog')
-							+tbodyTH('price-col tooltiped-col', 'Ниже чем у данного производителя', true)
+							+tbodyTH('price-col tooltiped-col', 'Ниже чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
 						tr
 							+tbodyTHBrend(5)
-							+tbodyTH('quality-col tooltiped-col', 'Выше, чем у данного производителя', true)
+							+tbodyTH('quality-col tooltiped-col', 'Выше, чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
 							+tbodyTH('replacement-col', 'Полная взаимозаменяемость с данным производителем')
 								+icon('comparation_analog')
 							+tbodyTH('delivery-time-col', 'Аналогичен SUPERLOK')
 								+icon('comparation_analog')
-							+tbodyTH('price-col tooltiped-col', 'Ниже чем у данного производителя', true)
+							+tbodyTH('price-col tooltiped-col', 'Ниже чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
 						tr
 							+tbodyTHBrend(6)
-							+tbodyTH('quality-col tooltiped-col', 'Выше, чем у данного производителя', true)
+							+tbodyTH('quality-col tooltiped-col', 'Выше, чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
 							+tbodyTH('replacement-col', 'Полная взаимозаменяемость с данным производителем')
 								+icon('comparation_analog')
-							+tbodyTH('delivery-time-col tooltiped-col', 'Меньше чем у данного производителя', true)
+							+tbodyTH('delivery-time-col tooltiped-col', 'Меньше чем у данного производителя', 'Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время')
 								+e.success-icon-cont
 									+icon('comparation_check')
 							+tbodyTH('price-col', 'Аналогична с данным производителем')
@@ -123,4 +123,4 @@ mixin tbodyTH(ColClass='quality-col', ColTxt="ColTxt", hasToolTip=false)
 				block
 			+e.tbody-th-txt=ColTxt
 			if hasToolTip
-				.tooltip Сроки поставки от SUPERLOK значительно меньше, и экономит Ваше время
+				.tooltip= hasToolTip 

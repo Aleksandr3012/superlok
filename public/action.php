@@ -21,7 +21,7 @@ $mail->setFrom('info@info.com','info info');
 
 
 //Субъект
-$mail->Subject = 'Заявка с сайта';
+$mail->Subject = 'заявки #суперлок';
 
 $time = date('d.m.Y в H:i');
 $html = '
@@ -88,14 +88,14 @@ if ($_FILES['file']['tmp_name']) {
 //send the message, check for errors
 if (empty($_POST['example-input-field'])) {
 
-    if (!$mail->send()) {
-        echo "Mailer Error: " . $mail->ErrorInfo;
-    } else {
-        echo "Message sent!";
-    }
-    if (isset($uploadfile))unlink($uploadfile);
-    if (isset($uploadfile2))unlink($uploadfile2);
 }
+        if (!$mail->send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        } else {
+            echo "Message sent!";
+        }
+if (isset($uploadfile))unlink($uploadfile);
+if (isset($uploadfile2))unlink($uploadfile2);
 
 ?>
 
