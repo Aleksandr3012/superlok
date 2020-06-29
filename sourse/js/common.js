@@ -269,9 +269,9 @@ function eventHandler() {
 	$("form").submit(function (e) {
 		e.preventDefault();
 		const th = $(this);
-		var file = th.find('[name="file"]').prop('files')[0];    
 		var name = th.find('[name="name"]').val();   
 		var email = th.find('[name="email"]').val();   
+		var organization = th.find('[name="organization"]').val();   
 		var tel = th.find('[name="tel"]').val();   
 		var utm_source = th.find('[name="utm_source"]').val();   
 		var utm_term = th.find('[name="utm_term"]').val();   
@@ -287,9 +287,13 @@ function eventHandler() {
 
 		var data = new FormData($('form')[0]); 
 		data.append('order', order);
-		data.append('file', file);
+		if (th.find('[name="file"]') == true){
+			var file = th.find('[name="file"]').prop('files')[0]; 
+			data.append('file', file);
+		}
 		data.append('name', name);
 		data.append('email', email);
+		data.append('organization', organization);
 		data.append('tel', tel);
 		data.append('utm_source', utm_source);
 		data.append('utm_term', utm_term);
@@ -325,9 +329,12 @@ function eventHandler() {
 				th.trigger("reset");
 				// $.magnificPopup.close();
 				$.fancybox.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 6000);
+				// ym(65246884, 'reachGoal', 'zakaz');
+				yaCounter65246884.reachGoal('order');
+				if (th.find('.btn-catalog-js') == true){
+					$('.btn-catalog-file').click();
+				}
+			}, 4000);
 		}).fail(function () { });
 
 	});
