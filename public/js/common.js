@@ -284,7 +284,7 @@ function eventHandler() {
 			$.fancybox.close();
 
 			if (th.parent().is("#modal-call-catalog")) {
-				$(".after-headline").after('<div class="download-wrap"><a class="h3" href="superlok-catalog.pdf" download>Скачать каталог</a> </div>');
+				$("#modal-thanks .after-headline").after('<div class="download-wrap"><a class="h3" href="superlok-catalog.pdf" download>Скачать каталог</a> </div>');
 			} else {
 				$(".download-wrap").remove();
 			}
