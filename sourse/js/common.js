@@ -269,32 +269,37 @@ function eventHandler() {
 	$("form").submit(function (e) {
 		e.preventDefault();
 		const th = $(this);
-		var name = th.find('[name="name"]').val();   
-		var email = th.find('[name="email"]').val();   
-		var organization = th.find('[name="organization"]').val();   
-		var tel = th.find('[name="tel"]').val();   
+		var name = th.find('[name="name"]').val() || '';   
+		var email = th.find('[name="email"]').val() || '';   
+		
 		var utm_source = th.find('[name="utm_source"]').val();   
 		var utm_term = th.find('[name="utm_term"]').val();   
 		var utm_medium = th.find('[name="utm_medium"]').val();   
 		var utm_campaign = th.find('[name="utm_campaign"]').val();   
 		var order = th.find('[name="order"]').val();   
+		var tel = th.find('[name="tel"]').val() ;   
+		var organization = th.find('[name="organization"]').val() ;
 		
 		utm_source = decodeURIComponent(gets['utm_source'] || '');
 		utm_term = decodeURIComponent(gets['utm_term'] || '');
 		utm_medium = decodeURIComponent(gets['utm_medium'] || '');
-		utm_campaign = decodeURIComponent(gets['utm_campaign'] || '');
-		
+		utm_campaign = decodeURIComponent(gets['utm_campaign'] || ''); 
 
 		var data = new FormData($('form')[0]); 
 		data.append('order', order);
-		if (th.find('[name="file"]') == true){
-			var file = th.find('[name="file"]').prop('files')[0]; 
+		var file = th.find('[name="file"]'); 
+	 
+		data.append('name', name);
+		data.append('email', email); 
+		if (tel ) {
+			
+			data.append('organization', organization);
+			data.append('tel', tel);
+		}
+		else {
+			var file = th.find('[name="file"]').prop('files')[0]
 			data.append('file', file);
 		}
-		data.append('name', name);
-		data.append('email', email);
-		data.append('organization', organization);
-		data.append('tel', tel);
 		data.append('utm_source', utm_source);
 		data.append('utm_term', utm_term);
 		data.append('utm_medium', utm_medium);
@@ -319,21 +324,25 @@ function eventHandler() {
 		}).done(function (data) {
 
 			$.fancybox.close();
+			if (th.parent().is("#modal-call-catalog")) {
+				$(".after-headline").after('<div class="download-wrap"><a class="h3" href="superlok-catalog.pdf" download>Скачать каталог</a> </div>')
+			}
+			else {
+				$(".download-wrap").remove();
+			}
 			$.fancybox.open({
 				src: '#modal-thanks',
 				type: 'inline'
 			});
-			// window.location.replace("/thanks.html");
+			// ym(65246884, 'reachGoal', 'order');
+			yaCounter65246884.reachGoal('order');
+			
 			setTimeout(function () {
 				// Done Functions
 				th.trigger("reset");
 				// $.magnificPopup.close();
-				$.fancybox.close();
-				// ym(65246884, 'reachGoal', 'zakaz');
-				yaCounter65246884.reachGoal('order');
-				if (th.find('.btn-catalog-js') == true){
-					$('.btn-catalog-file').click();
-				}
+				// $.fancybox.close();
+			
 			}, 4000);
 		}).fail(function () { });
 

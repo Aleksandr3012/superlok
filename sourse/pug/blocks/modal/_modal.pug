@@ -68,8 +68,9 @@ mixin modal()
 							+icon('mod-win-pdf')
 							| Прикрепить документ отзыва
 					+e.filename
-				input.btn.btn-catalog-js(type="submit" value="")
-				a.btn.btn-catalog-file(href="superlok-catalog.pdf" download)
+				label
+					input.btn.btn-catalog-js(type="submit" value="")
+					//- a.btn.btn-catalog-file(href="superlok-catalog.pdf" download)
 
 		//- Модалка спасибо
 		+form-wrap()(id="modal-thanks" class="modal-win modal-form" )
