@@ -50,6 +50,7 @@ mixin modal()
 				.text-center
 					+e.title.h3.ttu 
 					//- p.after-headline 
+				+input2('Организация','text',"Организация",'organization')(class="form-control-lg")
 				+input2('Иван Иванов','text',"Ваше Имя",'name')(required class="form-control-lg")
 					.icon-cont
 						+icon('mod-win-user')
@@ -59,7 +60,6 @@ mixin modal()
 				+input2('example@mail.com','email',"E-mail:")(required class="form-control-lg")
 					.icon-cont
 						+icon('mod-win-dog')
-				+input2('Организация','text',"Организация",'organization')(class="form-control-lg")
 
 				//- +b.add-file
 					label
