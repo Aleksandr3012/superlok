@@ -1,43 +1,107 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
+			+e.valve-price-top
+				img.top-fly-img-js(src="img/@2x/valve-price-top.png", alt="")
 			.headerSlider.swiper-container
 				.swiper-wrapper
-					mixin slide(im)
-						.swiper-slide
-							.row
-								.col-lg-7
-									+e.links
-										+e.linkItem(href="#") Аналоги Swagelok
-										+e.linkItem(href="#") Аналоги Hy Lok
-										+e.linkItem(href="#") Аналоги Parker
-									h1 Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.
-									.h5 В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры
-									+e.buttonWrap
-										+e.calc.btn.btn-grad.link-modal(href="#modal-call-2" data-title="Получить расчет" data-text="Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!" data-btn="Получить расчет" data-order="Получить расчет") Получить&nbsp;расчет
-										+e.price
-											+icon('clock')
-											.h6 Вы получите точную стоимость в течении #[strong 1&nbsp;часа!]
-								.col.d-none.d-lg-block
-									+e.pic
-										+e.IMG.img.res-i(src=`img/@2x/headerImg-${im}.png`, alt="")
-							+e.swiperButton
-								.swiper-button-prev
-									span назад
-									img(src="img/@2x/arrow-l.png", alt="")
-									//- +icon('arrow-l')
-								.swiper-button-next
-									span вперед
-									img(src="img/@2x/arrow-r.png", alt="")
-									//- +icon('arrow-r')
+					mixin slide(im, hash)
+						.swiper-slide(data-hash= hash)
+							.container
 
-					+slide('1')
-					+slide('2')
-					+slide('3')
-					+slide('4')
-					+slide('5')
-					+slide('6')
+								.row
+								
+									.col-lg-7(class="wow fadeIn " data-wow-delay="0.8s" data-wow-duration="1s")
+										block
+										+e.swiperButton
+											.swiper-button-prev
+												span назад
+												//- img(src="img/@2x/arrow-l.png", alt="")
+												+icon('arrow-l')
+											.swiper-button-next
+												span вперед
+												//- img(src="img/@2x/arrow-r.png", alt="")
+												+icon('arrow-r')
+									.col.d-none.d-lg-block
+										+e.pic
+											+e.border(class="wow fadeIn " data-wow-delay="0.3s" data-wow-duration="1s")
+											picture
+												source(  srcset=`img/@2x/webp/headerImg-${im}.webp`  type=`image/webp` )
+												+e.IMG.img.res-i(src=`img/@2x/headerImg-${im}.png`, alt="" class="wow fadeIn " data-wow-delay="0.7s" data-wow-duration="1s")
+
+
+					+slide('1', "class1")
+						+e.links
+							+e.linkItem(href="#") Аналоги Swagelok
+							+e.linkItem(href="#") Аналоги Hy Lok
+							+e.linkItem(href="#") Аналоги Parker
+						.h1 Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.
+						.h5 В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры
+						+e.buttonWrap
+							+e.calc.btn.btn-grad.link-modal(href="#modal-call-2" data-title="Получить расчет" data-text="Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!" data-btn="Получить расчет" data-order="Получить расчет") Получить&nbsp;расчет
+							+e.price
+								+icon('clock')
+								.h6 Вы получите точную стоимость в течении #[strong 1&nbsp;часа!]
+					+slide('2', "class2")
+						+e.links
+							+e.linkItem(href="#") Аналоги Swagelok
+							+e.linkItem(href="#") Аналоги Hy Lok
+							+e.linkItem(href="#") Аналоги Parker
+						.h1 Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.
+						.h5 В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры
+						+e.buttonWrap
+							+e.calc.btn.btn-grad.link-modal(href="#modal-call-2" data-title="Получить расчет" data-text="Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!" data-btn="Получить расчет" data-order="Получить расчет") Получить&nbsp;расчет
+							+e.price
+								+icon('clock')
+								.h6 Вы получите точную стоимость в течении #[strong 1&nbsp;часа!]
+					+slide('3', "class3")
+						+e.links
+							+e.linkItem(href="#") Аналоги Swagelok
+							+e.linkItem(href="#") Аналоги Hy Lok
+							+e.linkItem(href="#") Аналоги Parker
+						.h1 Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.
+						.h5 В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры
+						+e.buttonWrap
+							+e.calc.btn.btn-grad.link-modal(href="#modal-call-2" data-title="Получить расчет" data-text="Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!" data-btn="Получить расчет" data-order="Получить расчет") Получить&nbsp;расчет
+							+e.price
+								+icon('clock')
+								.h6 Вы получите точную стоимость в течении #[strong 1&nbsp;часа!]
+					+slide('4', "class4")
+						+e.links
+							+e.linkItem(href="#") Аналоги Swagelok
+							+e.linkItem(href="#") Аналоги Hy Lok
+							+e.linkItem(href="#") Аналоги Parker
+						.h1 Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.
+						.h5 В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры
+						+e.buttonWrap
+							+e.calc.btn.btn-grad.link-modal(href="#modal-call-2" data-title="Получить расчет" data-text="Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!" data-btn="Получить расчет" data-order="Получить расчет") Получить&nbsp;расчет
+							+e.price
+								+icon('clock')
+								.h6 Вы получите точную стоимость в течении #[strong 1&nbsp;часа!]
+					+slide('5', "class5")
+						+e.links
+							+e.linkItem(href="#") Аналоги Swagelok
+							+e.linkItem(href="#") Аналоги Hy Lok
+							+e.linkItem(href="#") Аналоги Parker
+						.h1 Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.
+						.h5 В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры
+						+e.buttonWrap
+							+e.calc.btn.btn-grad.link-modal(href="#modal-call-2" data-title="Получить расчет" data-text="Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!" data-btn="Получить расчет" data-order="Получить расчет") Получить&nbsp;расчет
+							+e.price
+								+icon('clock')
+								.h6 Вы получите точную стоимость в течении #[strong 1&nbsp;часа!]
+					+slide('6', "class6")
+						+e.links
+							+e.linkItem(href="#") Аналоги Swagelok
+							+e.linkItem(href="#") Аналоги Hy Lok
+							+e.linkItem(href="#") Аналоги Parker
+						.h1 Фитинги, игольчатые клапаны, шаровые краны и&nbsp;др.
+						.h5 В&nbsp;нашем ассортименте имеется огромный выбор соединительной, запорно-регулирующей, предохранительной и&nbsp;прочей арматуры
+						+e.buttonWrap
+							+e.calc.btn.btn-grad.link-modal(href="#modal-call-2" data-title="Получить расчет" data-text="Оставьте заявку на расчет, и мы перезвоним Вам в&nbsp;течении 10&nbsp;минут!" data-btn="Получить расчет" data-order="Получить расчет") Получить&nbsp;расчет
+							+e.price
+								+icon('clock')
+								.h6 Вы получите точную стоимость в течении #[strong 1&nbsp;часа!]
 			.swiper-pagination.swiper-pagination--head
 
 

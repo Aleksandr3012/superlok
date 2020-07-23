@@ -8,6 +8,7 @@
 		padding-bottom: rem(15);
 	}
 	.container {
+		position: relative;
 		@include media-breakpoint-up(xl) {
 			max-width: 1205px;
 		}
@@ -26,6 +27,19 @@
 		height: calc(100% - #{rem(25)});
 	}
 
+	&__valve-profitably {
+		position: absolute;
+		// z-index: 1;
+		right: -7%;
+		top: -4%;
+		@include media-breakpoint-down(md) {
+			img {
+				transform: none !important;
+			}
+		}
+
+	}
+
 	&__col {
 		@include media-breakpoint-up(xl) {
 			max-width: rem(334) !important;
@@ -42,8 +56,10 @@
 		@include roww(12);
 	}
 
-	img {
+	.icon {
 		margin-bottom: rem(15);
+		font-size: rem(52);
+		color: $primary;
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(37);
 		}

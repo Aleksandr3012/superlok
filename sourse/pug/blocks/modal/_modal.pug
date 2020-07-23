@@ -1,7 +1,7 @@
 
 mixin modal()
 	.d-none
-		+form-wrap()(id="modal-call" class="modal-win modal-form" enctype="multipart/form-data")
+		+form-wrap()(id="modal-call" class="modal-win modal-form"  )
 			.modal-container
 				.text-center
 					+e.title.h3.ttu 
@@ -14,7 +14,7 @@ mixin modal()
 						+icon('mod-win-dog')
 				+b.add-file
 					label
-						input(type="file" name="file")
+						input(type="file" name="file")#file_present
 						+e.SPAN.btn-file
 							+icon('mod-win-pdf')
 							| Прикрепить документ отзыва
@@ -45,5 +45,57 @@ mixin modal()
 					+e.filename
 				input.btn(type="submit" value="")
 
+		+form-wrap()(id="modal-call-catalog" class="modal-win modal-form" )
+			.modal-container
+				.text-center
+					+e.title.h3.ttu 
+					//- p.after-headline 
+				+input2('Организация','text',"Организация",'organization')(class="form-control-lg")
+				+input2('Иван Иванов','text',"Ваше Имя",'name')(required class="form-control-lg")
+					.icon-cont
+						+icon('mod-win-user')
+				+input2('+7 (___) ___ - __ - __','tel',"Ваш номер телефона:")(required class="form-control-lg")
+					.icon-cont
+						+icon('phone-modal')
+				+input2('example@mail.com','email',"E-mail:")(required class="form-control-lg")
+					.icon-cont
+						+icon('mod-win-dog')
+
+				//- +b.add-file
+					label
+						input(type="file")
+						+e.SPAN.btn-file
+							+icon('mod-win-pdf')
+							| Прикрепить документ отзыва
+					+e.filename
+				label
+					input.btn.btn-catalog-js(type="submit" value="")
+					//- a.btn.btn-catalog-file(href="superlok-catalog.pdf" download)
+
+		//- Модалка спасибо
+		+form-wrap()(id="modal-thanks" class="modal-win modal-form" )
+			.modal-container
+				.text-center
+					+e.img-done
+						img(src="img/@2x/done.png", alt="")
+					+e.title.h3.ttu Отлично!
+					p.after-headline Ваша заявка отправлена. Ожидайте, наш менеджер свяжется с Вами в ближайшее время!
+				//- +input2('Иван Иванов','text',"Ваше Имя",'name')(required class="form-control-lg")
+				//- 	.icon-cont
+				//- 		+icon('mod-win-user')
+				//- +input2('+7 (___) ___ - __ - __','tel',"Ваш номер телефона:")(required class="form-control-lg")
+				//- 	.icon-cont
+				//- 		+icon('phone-modal')
+				//- +input2('example@mail.com','email',"E-mail:")(required class="form-control-lg")
+				//- 	.icon-cont
+				//- 		+icon('mod-win-dog')
+				//- +b.add-file
+					label
+						input(type="file")
+						+e.SPAN.btn-file
+							+icon('mod-win-pdf')
+							| Прикрепить документ отзыва
+					+e.filename
+				//- input.btn(type="submit" value="")
 		// #modal-call
 	// modal

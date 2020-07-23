@@ -2,7 +2,10 @@ mixin sPrice()
 	// start sPrice
 	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
 		.container
-			img.lazy.d-none.d-xl-block(src="#" data-src="img/@2x/price.jpg", alt="" class="wow zoomInDown"  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s` )
+			+pic('price')(class="wow fadeInLeft d-none d-xl-block"  data-wow-delay=`${delay}s` data-wow-duration=`${dur }s`)
+			//- img(src="img/@2x/price.jpg", alt=""  )
+			+e.valve-price-bottom
+				img.bottom-fly-img-js(src="img/@2x/valve-price-bottom.png", alt="")
 			+e.leftBlock
 				+b.section-title
 					h2 Низкая цена
@@ -15,7 +18,7 @@ mixin sPrice()
 						+e.price.btn-white.link-modal(href="#modal-call-2" data-title="Запросить цену" data-text="Оставьте заявку на запрос цены, и мы перезвоним Вам в течении 10&nbsp;минут!" data-btn="Запросить цену" data-order="Запросить цену") Запросить цену
 					.col-md-5
 						+e.numb 02
-						b Без наценок
+						b Без лишних наценок
 						.h4 У&nbsp;нас оптимальный штат сотрудников, а&nbsp;потому нет лишних наценок
 					.col-1.d-none.d-md-block
 						+e.numb--empty

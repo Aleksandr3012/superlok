@@ -254,6 +254,12 @@
 		@include media-breakpoint-up(xl){
 			bottom: 57px;
 		}
+
+		@include media-breakpoint-down(md) {
+			img {
+				transform: matrix(1, 0, 0, 1, 0, 100) !important;
+			}
+		}
 	}
 	&__roller-wanna-fly{
 		position: absolute;

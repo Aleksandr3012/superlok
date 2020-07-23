@@ -108,8 +108,11 @@
       border: none !important;
       box-shadow: none !important;
       outline: none !important;
+			@include media-breakpoint-up(sm){
 
-			padding: 22px;
+				padding: rem(22px);
+			}
+			padding: rem(10px);
       height: 60px;
       width: 100%;
       display: flex;
@@ -147,6 +150,7 @@
 	.fancybox-button.fancybox-close-small{
 		//position: relative;
 
+		transform: translateX(-40%) translateY(-50%);
 		@include media-breakpoint-up(sm){
 			transform: translateX(100%) translateY(-100%);
 			svg{
@@ -165,6 +169,11 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+
+	.form-wrap__img-done {
+		margin-bottom: rem(20);
+		display: block;
 	}
 }
 

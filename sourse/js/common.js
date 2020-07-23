@@ -1,3 +1,5 @@
+// const { EffectFade } = require("swiper/js/swiper.esm");
+
 const $ = jQuery;
 const JSCCommon = {
 	CustomInputFile: function CustomInputFile() {
@@ -49,7 +51,7 @@ const JSCCommon = {
 			modal.find('.ttu').html(content.title);
 			modal.find('.after-headline').html(content.text);
 			modal.find('.btn').val(content.btn);
-			modal.find('.order').html(content.order);
+			modal.find('.order').val(content.order);
 		})
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
@@ -183,7 +185,7 @@ function eventHandler() {
 		// 
 		// скрывает моб меню
 
-		const topH = $("header ").innerHeight();
+		const topH = $(".header ").innerHeight();
 
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > topH) {
@@ -208,7 +210,7 @@ function eventHandler() {
 	// листалка по стр
 	$(" .top-nav li a, .scroll-link").click(function () {
 		const elementClick = $(this).attr("href");
-		const destination = $(elementClick).offset().top;
+		const destination = $(elementClick).offset().top-70;
 
 		$('html, body').animate({ scrollTop: destination }, 1100);
 
@@ -221,6 +223,7 @@ function eventHandler() {
 	const swiper4 = new Swiper('.headerSlider', {
 		// slidesPerView: 5,
 		// ...defaultSl,
+		// effect: 'fade',
 		loop: true,
 		slidesPerView: 1,
 		watchOverflow: true,
@@ -229,6 +232,10 @@ function eventHandler() {
 		watchOverflow: true,
 		slidesPerGroup: 1,
 		touchRatio: 0.2,
+		hashNavigation: {
+			watchState: true,
+			replaceState: true,
+		},
 		// slideToClickedSlide: true,
 		// freeModeMomentum: true,
 		navigation: {
@@ -262,34 +269,85 @@ function eventHandler() {
 	$("form").submit(function (e) {
 		e.preventDefault();
 		const th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
+		var name = th.find('[name="name"]').val() || '';
+		var email = th.find('[name="email"]').val() || '';
+
+		var utm_source = th.find('[name="utm_source"]').val();
+		var utm_term = th.find('[name="utm_term"]').val();
+		var utm_medium = th.find('[name="utm_medium"]').val();
+		var utm_campaign = th.find('[name="utm_campaign"]').val();
+		var order = th.find('[name="order"]').val();
+		var tel = th.find('[name="tel"]').val() ;
+		var organization = th.find('[name="organization"]').val() ;
+
+		utm_source = decodeURIComponent(gets['utm_source'] || '');
+		utm_term = decodeURIComponent(gets['utm_term'] || '');
+		utm_medium = decodeURIComponent(gets['utm_medium'] || '');
+		utm_campaign = decodeURIComponent(gets['utm_campaign'] || '');
+
+		var data = new FormData($('form')[0]);
+		data.append('order', order);
+		var file = th.find('[name="file"]');
+
+		data.append('name', name);
+		data.append('email', email);
+		if (tel ) {
+
+			data.append('organization', organization);
+			data.append('tel', tel);
+		}
+		else {
+			var file = th.find('[name="file"]').prop('files')[0]
+			data.append('file', file);
+		}
+		data.append('utm_source', utm_source);
+		data.append('utm_term', utm_term);
+		data.append('utm_medium', utm_medium);
+		data.append('utm_campaign', utm_campaign);
+	  // data = th.serialize();
+		// data.append('action_present', 'save');
+		// data.append('product_id', $product_id);
+		// data.append('title', title);
+		// data.append('description', description);
+		// data.append('publish_down', publish_down);
+		// data.append('removefile', removefile);
+		// data.append('file', $('#file_present')[0].files[0]);
+
 		$.ajax({
 			url: 'action.php',
+			dataType: 'text',  // what to expect back from the PHP script, if anything
+			cache: false,
+			contentType: false,
+			processData: false,
 			type: 'POST',
 			data: data,
 		}).done(function (data) {
 
 			$.fancybox.close();
+			if (th.parent().is("#modal-call-catalog")) {
+				$("#modal-thanks .after-headline").after('<div class="download-wrap"><a class="h3" href="superlok-catalog.pdf" download>Скачать каталог</a> </div>')
+			}
+			else {
+				$(".download-wrap").remove();
+			}
 			$.fancybox.open({
 				src: '#modal-thanks',
 				type: 'inline'
 			});
-			// window.location.replace("/thanks.html");
+			// ym(65246884, 'reachGoal', 'order');
+			yaCounter65246884.reachGoal('order');
+
 			setTimeout(function () {
 				// Done Functions
 				th.trigger("reset");
 				// $.magnificPopup.close();
-				$.fancybox.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
+				// $.fancybox.close();
+
 			}, 4000);
 		}).fail(function () { });
 
 	});
+
 
 	//luckyoneJS
 	let partnersSlider =  new Swiper('.partners-slider-container-js', {
@@ -394,6 +452,7 @@ function eventHandler() {
 	})
 		// .setPin("#sBrendRepresent")
 		.setTween(wipeAnimation)
+		// .addIndicators() // add indicators (requires plugin)
 		//.addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
 	}
@@ -401,6 +460,9 @@ function eventHandler() {
 	//axilary funcs
 	animateElem.call('#sBrendRepresent', '.roller-img', .1, {y: -150}, { y: 100});
 	animateElem.call('#sBrendRepresent', '.calc-img-js', .1, {y: -250, x: 20, opacity: 0.75, rotate: 100}, { y: 50, x: -25, opacity: 1, rotate: 0});
+	animateElem.call('#sProfitably', '.fly-img-js', .1, {y: 50, x: -20}, { y: 550, x: 50, opacity: 1});
+	animateElem.call('#headerBlock', '.top-fly-img-js', .1, {y: -150, x: -50,}, { y: 250, x: -150, opacity: 1});
+	animateElem.call('#sPrice', '.bottom-fly-img-js', .1, {y: -250, x: -20}, { y: 300, x: 50, opacity: 1});
 	// animateElem('.roller-img-2');
 	function addZero(num) {
 		num = Number(num);
@@ -428,6 +490,12 @@ function eventHandler() {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	});
+
+
+
+	// карта
+
+	// /карта
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

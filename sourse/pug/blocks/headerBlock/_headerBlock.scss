@@ -2,7 +2,7 @@
 .headerBlock {
 	margin-bottom: 1px;
 	padding-bottom: 0;
-	padding-top: calc(var(--sPT) + #{rem(60)});
+	padding-top: calc(var(--sPT) + #{rem(40)});
 	// @include media-breakpoint-down(md) {
 	// 	padding-top: rem(30);
 	// }
@@ -21,7 +21,7 @@
 			max-width: 1200px;
 		}
 	}
-
+	.h1,
 	h1 {
 		font-weight: 500;
 		line-height: 1.1;
@@ -147,33 +147,53 @@
 		min-height: rem(600);
 		@media (min-width: 1200px) and (max-width: 1440px) {
 			min-height: rem(450);
+			img{
+				max-height: 115%;
+			}
 		}
 		position: relative;
 		width: 100%;
 		height: 100%;
-		border: calc(#{rem(40px)} + 1vw) solid $primary;
-		box-shadow: 4px 4px 26px rgba(0, 67, 125, 0.24);
+		// border: calc(#{rem(40px)} + 1vw) solid $primary;
+		// box-shadow: 4px 4px 26px rgba(0, 67, 125, 0.24);
 		@include media-breakpoint-up(xl) {
-			border: rem(64px) solid $primary;
+			// border: rem(64px) solid $primary;
 		}
 
 		img {
 			@include a-cent;
 			max-width: 150%;
 			@media (min-width: 1200px) and (max-width: 1440px) {
-				max-width: 120%;
+				max-width: 85%;
 			}
 		}
 	}
 
+	&__border {
+		border: calc(#{rem(40px)} + 1vw) solid $primary;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		box-shadow: 4px 4px 26px rgba(0, 67, 125, 0.24);
+		@include media-breakpoint-up(xl) {
+			border: rem(64px) solid $primary;
+		}
+
+	}
+
 	.headerSlider {
 		padding-top: 0;
+		@include media-breakpoint-up(xl) {
+			padding-top: rem(80);
+			padding-bottom: rem(100);
+		}
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(40);
 			padding-bottom: rem(60);
 		}
 		@media (min-width: 1200px) and (max-width: 1440px) {
-			padding-bottom: rem(30);
+			padding-top: rem(40);
+			padding-bottom: rem(70);
 		}
 	}
 
@@ -212,11 +232,11 @@
 	.swiper-button-next, .swiper-button-prev {
 		margin-top: rem(25);
 		@include media-breakpoint-up(xl) {
-			margin-top: rem(-95);
+			// margin-top: rem(-95);
 		}
-		@media (min-width: 1200px) and (max-width: 1440px) {
-			margin-top: rem(-20);
-		}
+		// @media (min-width: 1200px) and (max-width: 1440px) {
+		// 	margin-top: rem(-20);
+		// }
 		color: $body-color;
 		// top: 105%;
 		display: flex;
@@ -225,11 +245,6 @@
 		width: auto;
 		flex-direction: column;
 
-		// .icon {
-		// 	font-size: rem(30);
-		// 	color: $primary;
-		// 	display: block;
-		// }
 
 		img {
 			@include mt;
@@ -241,6 +256,10 @@
 		&::after {
 			content: '';
 		}
+
+		.icon {
+			color: #0671B6;
+		}
 	}
 
 	&__swiperButton {
@@ -250,6 +269,17 @@
 			margin-bottom: rem(10);
 		}
 		// margin-left: rem(30);
+	}
+
+	&__valve-price-top {
+		position: absolute;
+		// z-index: 1;
+		right: 20%;
+		bottom: -45%;
+		@include media-breakpoint-down(md) {
+			right: 20% !important;
+			bottom: -90% !important;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -290,6 +320,8 @@
 
 }
 
+
+
 .swiper-pagination--head {
 
 	@media (min-width:1450px) {
@@ -298,6 +330,10 @@
 		top: 37%;
 		flex-direction: column;
 		width: rem(100);
+	}
+
+	@media (min-width: 1200px) and (max-width: 1440px)  {
+		margin-top: -40px;
 	}
 	display: flex;
 	justify-content: center;

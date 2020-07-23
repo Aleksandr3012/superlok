@@ -1,5 +1,8 @@
 	// start .sPrice
 .sPrice {
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(60);
+	}
 	@include media-breakpoint-down(lg) {
 		text-align: center;
 		padding-top: rem(88);
@@ -157,6 +160,17 @@
 		}
 		max-width: rem(1007px);
 		background: linear-gradient(89.61deg, #155286 0.23%, #1975B1 99.76%);
+	}
+
+	&__valve-price-bottom {
+		position: absolute;
+		// z-index: 1;
+		bottom: 15%;
+		left: 7%;
+		@include media-breakpoint-down(md) {
+			bottom: 15% !important;
+			left: 7% !important;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

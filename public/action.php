@@ -13,14 +13,15 @@ $mail->CharSet = 'utf-8';
 $mail->setFrom('info@info.com','info info');
 
 //  $mail->addAddress('wol1414@gmail.com');
- $mail->addAddress('flaming3012@gmail.com');
+ $mail->addAddress('zakaz@суперлок.рус');
+ $mail->addAddress('leads@ad-heads.ru');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
 
 
 //Субъект
-$mail->Subject = 'Заявка с сайта';
+$mail->Subject = 'заявки #суперлок';
 
 $time = date('d.m.Y в H:i');
 $html = '
@@ -36,6 +37,11 @@ $html = '
     
     if (!empty($_POST['tel'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
+    }
+
+    
+    if (!empty($_POST['organization'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Организация:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['organization'] . '</b></td></tr>';
     }
     
     if (!empty($_POST['email'])) {
@@ -87,14 +93,14 @@ if ($_FILES['file']['tmp_name']) {
 //send the message, check for errors
 if (empty($_POST['example-input-field'])) {
 
-    if (!$mail->send()) {
-        echo "Mailer Error: " . $mail->ErrorInfo;
-    } else {
-        echo "Message sent!";
-    }
-    if (isset($uploadfile))unlink($uploadfile);
-    if (isset($uploadfile2))unlink($uploadfile2);
 }
+        if (!$mail->send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        } else {
+            echo "Message sent!";
+        }
+if (isset($uploadfile))unlink($uploadfile);
+if (isset($uploadfile2))unlink($uploadfile2);
 
 ?>
 
