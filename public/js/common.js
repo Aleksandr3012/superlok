@@ -340,7 +340,7 @@ function eventHandler() {
 			triggerHook: "onLeave",
 			duration: "100%"
 		}) // .setPin("#sBrendRepresent")
-		.setTween(wipeAnimation).addIndicators() // add indicators (requires plugin)
+		.setTween(wipeAnimation) //.addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
 	} //axilary funcs
 
