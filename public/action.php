@@ -13,8 +13,9 @@ $mail->CharSet = 'utf-8';
 $mail->setFrom('info@info.com','info info');
 
 //  $mail->addAddress('wol1414@gmail.com');
- $mail->addAddress('zakaz@суперлок.рус');
- $mail->addAddress('leads@ad-heads.ru');
+ //$mail->addAddress('zakaz@суперлок.рус');
+ //$mail->addAddress('leads@ad-heads.ru');
+    $mail->addAddress('luckyone1221@gmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
